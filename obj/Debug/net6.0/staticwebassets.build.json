@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "xmLeXeaH/+qFffNpr39gsfETJNx3enXq/AReC9Dxo8c=",
+  "Source": "gestao_campeonato",
+  "BasePath": "_content/gestao_campeonato",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "gestao_campeonato\\wwwroot",
+      "Source": "gestao_campeonato",
+      "ContentRoot": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\",
+      "BasePath": "_content/gestao_campeonato",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
