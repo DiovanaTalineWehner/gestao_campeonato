@@ -23,7 +23,7 @@ namespace gestao_campeonato.Repository
         {
             return await _context.Equipe.FirstOrDefaultAsync(e => e.id_equipe == id_equipe);
         }*/
-        public async Task<Equipe> GetEquipeByIdAsync(int id_equipe)
+        public async Task<Equipe> GetEquipeById(int id_equipe)
         {
             return await _context.Equipe.FindAsync(id_equipe);
         }
