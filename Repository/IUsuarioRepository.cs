@@ -9,6 +9,7 @@ namespace gestao_campeonato.Repository
     {
         Task<IEnumerable<Usuario>> ListAsync();
         Task CadastrarUsuario(Usuario usuario);
+        Task<Usuario> GetUsuarioByEmail(string email_usuario);
 
     }
 }

@@ -1,6 +1,11 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using gestao_campeonato.Models;
+using gestao_campeonato.Repository;
+using gestao_campeonato.Service.Communication;
+using gestao_campeonato.Service;
 using gestao_campeonato.Repository;
 
 namespace gestao_campeonato.Service
@@ -23,5 +28,8 @@ namespace gestao_campeonato.Service
         {
             await _equipeRepository.CadastrarEquipe(equipe);
         }
+        
+            
+        
     }
 }

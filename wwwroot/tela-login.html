@@ -16,17 +16,48 @@
                     <h1>LOGIN</h1>
                       <div class="textfield">
                       <label for="usuario">Usuário</label>
-                      <input type="text" name="usuario" placeholder="Usuario">
+                      <input type="text" id="usuario" name="usuario" placeholder="Usuario">
                       </div>
                          <div class="textfield">
                          <label for="senha">Senha</label>
-                         <input type="password" name="senha" placeholder="Senha">
+                         <input type="password" id="senha" name="senha" placeholder="Senha">
                          </div>
-                <button class="btn-login">Login</button>
+                <button class="btn-login" onclick="LogarUsuario()">Login</button>
             </div>
     </div>
 
 </div>
-    
+
 </body>
 </html>
+<script>
+    function LogarUsuario() {
+        debugger
+        var url = "http://localhost:5000/api/usuario/login";
+
+        var email = document.getElementById('usuario').value;
+        var senha = document.getElementById('senha').value;
+
+        if (email == null || email == "") {
+            alert("Informe um E-mail!");
+            return;
+        }
+        if (senha == null || senha == "") {
+            alert("Informe uma Senha!");
+            return;
+        }
+
+        var request = new XMLHttpRequest();
+        request.open("POST", url);
+        request.setRequestHeader("Content-Type", "application/json");
+        request.send(JSON.stringify({ "UserName": email, "Password": senha }));
+
+        request.onreadystatechange = function(){
+            if (request.readyState == 4 && request.status == 200 ) {
+                alert("Usuário Logado!");
+            } else {
+                alert("Usuário ou Senha incorreto!");
+            }
+        }
+    }
+    </script>

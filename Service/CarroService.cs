@@ -34,38 +34,30 @@ namespace gestao_campeonato.Service
 
         public async Task<CarroResponse> CadastrarCarro(Carro carro)
         {
-             try
+            try
             {
-             var existingEquipe = await _EquipeRepository.GetEquipeById(carro.id_equipe);
+                var existingEquipe = await _EquipeRepository.GetEquipeById(carro.equipe.id_equipe);
                 if (existingEquipe == null)
+                {
                     return new CarroResponse("Invalid equipe.");
+                }
+            
+                carro.equipe = existingEquipe;
 
-                await _CarroRepository.CadastrarCarro(carro);
-              //  await _unitOfWork.CompleteAsync();
-
-                return new CarroResponse(carro);
-            }
-            catch (Exception ex)
-            {
-                // Do some logging stuff
-                return new CarroResponse($"An error occurred when saving the product: {ex.Message}");
-            }
-             try
-            {
                 var existingCarro = await _CarroRepository.GetCarroByName(carro.nome_carro);
                 if (existingCarro != null)
                 {
                     return new CarroResponse("Já existe um carro com esse nome.");
                 }
-
                 await _CarroRepository.CadastrarCarro(carro);
 
                 return new CarroResponse(carro);
             }
             catch (Exception ex)
             {
-                return new CarroResponse($"Ocorreu um erro ao salvar o carro: {ex.Message}");
+                return new CarroResponse($"An error occurred when saving the product: {ex.Message}");
             }
+            
         }
 
         public async Task<CarroResponse> DeleteCarro(int id)

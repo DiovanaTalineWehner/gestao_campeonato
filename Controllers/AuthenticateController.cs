@@ -76,11 +76,6 @@ public class AuthenticateController : ControllerBase
                 new (JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
 
-            var userRoles = await _userManager.GetRolesAsync(user);
-
-            foreach (var userRole in userRoles)
-                authClaims.Add(new(ClaimTypes.Role, userRole));
-
             return Ok(new ResponseModel { Data = GetToken(authClaims) });
         }
 

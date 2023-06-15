@@ -16,8 +16,13 @@ namespace gestao_campeonato.Repository
         }
          public async Task CadastrarUsuario(Usuario usuario)
         {
-            _context.Usuario.AddAsync(usuario);
+             _context.Usuario.AddAsync(usuario);
             await _context.SaveChangesAsync();
+
+        }
+        public async Task<Usuario> GetUsuarioByEmail(string email_usuario)
+        {
+            return await _context.Usuario.FirstOrDefaultAsync(e => e.email_usuario == email_usuario);
         }
     }
 }
