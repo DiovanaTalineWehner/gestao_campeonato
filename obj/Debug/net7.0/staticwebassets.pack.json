@@ -1,8 +1,20 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\Criarconta.css",
+      "PackagePath": "staticwebassets\\Criarconta.css"
+    },
+    {
+      "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\Criarconta.html",
+      "PackagePath": "staticwebassets\\Criarconta.html"
+    },
+    {
       "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\Readme.txt",
       "PackagePath": "staticwebassets\\Readme.txt"
+    },
+    {
+      "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\Verificação.js",
+      "PackagePath": "staticwebassets\\Verificação.js"
     },
     {
       "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\assets\\css\\style.css",
@@ -27,6 +39,10 @@
     {
       "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\assets\\img\\apple-touch-icon.png",
       "PackagePath": "staticwebassets\\assets\\img\\apple-touch-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\assets\\img\\chefs\\Dioprojeto.jpeg",
+      "PackagePath": "staticwebassets\\assets\\img\\chefs\\Dioprojeto.jpeg"
     },
     {
       "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\assets\\img\\chefs\\chefs-1.jpg",
@@ -171,6 +187,10 @@
     {
       "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\assets\\img\\specials-5.png",
       "PackagePath": "staticwebassets\\assets\\img\\specials-5.png"
+    },
+    {
+      "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\assets\\img\\testimonials\\Dioprojeto.jpeg",
+      "PackagePath": "staticwebassets\\assets\\img\\testimonials\\Dioprojeto.jpeg"
     },
     {
       "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\assets\\img\\testimonials\\imagem Lucas.jpeg",
