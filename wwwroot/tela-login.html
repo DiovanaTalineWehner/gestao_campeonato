@@ -23,11 +23,26 @@
                          <input type="password" id="senha" name="senha" placeholder="Senha">
                          </div>
                 <button class="btn-login" onclick="LogarUsuario()">Login</button>
+                <button class="btn-criar-conta" id="btn-criar-conta">Criar conta</button>
+
             </div>
     </div>
 
 </div>
+<!--Ao clicar no botão criar conta vai direcionada para página de Criarconta.html-->
+<script> 
+    console.log("Script carregado"); 
 
+    var btnCriarConta = document.getElementById("btn-criar-conta");
+
+    btnCriarConta.addEventListener("click", function() {
+        console.log("Botão Criar conta clicado");
+        window.open("Criarconta.html");
+    });
+</script>
+
+
+<!-- Autenticação dos dados de cadastro, observação só vai conseguir fazer o login se tiver cadastrado uma conta-->
 </body>
 </html>
 <script>
