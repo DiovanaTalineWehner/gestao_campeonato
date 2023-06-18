@@ -77,6 +77,34 @@ namespace gestao_campeonato.Controllers
             }
 
             return Unauthorized();
+                                                            
+                                                             //Enviar a informação para o Front-end
+                                                             //if (usuarioAutenticado)
+                                                             // {
+                                                             // Session["Username"] = username; // Armazena o nome de usuário na sessão
+                                                             // Response.Redirect("index.html"); // Redireciona para a página principal do site
+                                                             // }
+                                                             // else
+                                                             // {
+                                                             //Login inválido
+                                                             // Exibir mensagem de erro
+                                                             // }
+                                                             
+
+
+
+
+                                                             // protected void Page_Load(object sender, EventArgs e)
+                                                             // {
+                                                            // if (Session["Username"] != null)
+                                                            //   {
+                                                            //   string username = Session["Username"].ToString();
+                                                            //    userHeader.Text = "Bem-vindo, " + username;
+                                                            //   }
+                                                            // }
+
+
+
         }
 
         private TokenModel GetToken(List<Claim> authClaims)

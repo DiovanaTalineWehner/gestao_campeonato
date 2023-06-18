@@ -8,6 +8,19 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+#navbar ul li:nth-child(2),
+#navbar ul li:nth-child(5) {
+  margin-right: 0px; /* Ajuste o valor conforme necessário */
+}
+
+#navbar ul li:nth-child(3),
+#navbar ul li:nth-child(4) {
+  margin-right: -15px; /* Ajuste o valor conforme necessário */
+}
+
+
+
 body {
   font-family: "Open Sans", sans-serif;
   background: #0c0b09;
