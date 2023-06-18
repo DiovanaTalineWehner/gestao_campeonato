@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WMlfLtVy/rYjQKoLrzl9e5yEXSaOKX8acX1ujfQObv4=",
+  "Hash": "skOU6KbOpMnsOl6roVbuZmFVM2gR0NitQ/x0KyrYM5A=",
   "Source": "gestao_campeonato",
   "BasePath": "_content/gestao_campeonato",
   "Mode": "Default",
@@ -134,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\chefs\\chefs-3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\assets\\img\\chefs\\Dioprojeto.jpeg",
+      "SourceId": "gestao_campeonato",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\",
+      "BasePath": "_content/gestao_campeonato",
+      "RelativePath": "assets/img/chefs/Dioprojeto.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\chefs\\Dioprojeto.jpeg"
     },
     {
       "Identity": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\assets\\img\\chefs\\imagemlucaschefs.jpeg",
@@ -712,6 +729,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\specials-5.png"
+    },
+    {
+      "Identity": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\assets\\img\\testimonials\\Dioprojeto.jpeg",
+      "SourceId": "gestao_campeonato",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\",
+      "BasePath": "_content/gestao_campeonato",
+      "RelativePath": "assets/img/testimonials/Dioprojeto.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\testimonials\\Dioprojeto.jpeg"
     },
     {
       "Identity": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\assets\\img\\testimonials\\imagem Lucas.jpeg",
@@ -2108,6 +2142,40 @@
       "OriginalItemSpec": "wwwroot\\changelog.txt"
     },
     {
+      "Identity": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\Criarconta.css",
+      "SourceId": "gestao_campeonato",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\",
+      "BasePath": "_content/gestao_campeonato",
+      "RelativePath": "Criarconta.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Criarconta.css"
+    },
+    {
+      "Identity": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\Criarconta.html",
+      "SourceId": "gestao_campeonato",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\",
+      "BasePath": "_content/gestao_campeonato",
+      "RelativePath": "Criarconta.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Criarconta.html"
+    },
+    {
       "Identity": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\forms\\book-a-table.php",
       "SourceId": "gestao_campeonato",
       "SourceType": "Discovered",
@@ -2242,6 +2310,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\tela-login.html"
+    },
+    {
+      "Identity": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\Verificação.js",
+      "SourceId": "gestao_campeonato",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\",
+      "BasePath": "_content/gestao_campeonato",
+      "RelativePath": "Verificação.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Verificação.js"
     }
   ]
 }
