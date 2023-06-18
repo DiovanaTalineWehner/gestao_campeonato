@@ -1,7 +1,7 @@
 /**
 * Template Name: Restaurantly - v3.1.0
 * Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
-* Author: BootstrapMade.com
+* Author: BootstrapMade.com 
 * License: https://bootstrapmade.com/license/
 */
 
@@ -1352,6 +1352,8 @@ section {
   left: 0;
   right: 0;
   transition: 0.2s;
+  
+  
 }
 
 .chefs .member .member-info-content {
@@ -1369,7 +1371,7 @@ section {
   color: #fff;
 }
 
-.chefs .member .member-info-content span {
+.chefs .member .member-info-content span { 
   font-style: italic;
   display: block;
   font-size: 13px;
@@ -1741,6 +1743,18 @@ section {
 
 .custom-img51{
 
-  width:2000x;
-  height: 570px;
+  width: 416px;
+  height: 556px;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+}
+
+.img-fluid1{
+
+  width: 500px;
+  height: 555px;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
 }
