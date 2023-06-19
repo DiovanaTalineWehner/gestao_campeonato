@@ -78,17 +78,17 @@ namespace gestao_campeonato.Controllers
 
             return Unauthorized();
                                                             
-                                                             //Enviar a informação para o Front-end
-                                                             //if (usuarioAutenticado)
-                                                             // {
-                                                             // Session["Username"] = username; // Armazena o nome de usuário na sessão
-                                                             // Response.Redirect("index.html"); // Redireciona para a página principal do site
-                                                             // }
-                                                             // else
-                                                             // {
-                                                             //Login inválido
-                                                             // Exibir mensagem de erro
-                                                             // }
+                        //Enviar a informação para o Front-end
+                        //if (usuarioAutenticado)
+                        // {
+                        // Session["Username"] = username; // Armazena o nome de usuário na sessão
+                        // Response.Redirect("index.html"); // Redireciona para a página principal do site
+                        // }
+                        // else
+                        // {
+                        //Login inválido
+                        // Exibir mensagem de erro
+                        // }
                                                              
 
 
