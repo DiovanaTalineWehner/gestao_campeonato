@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "skOU6KbOpMnsOl6roVbuZmFVM2gR0NitQ/x0KyrYM5A=",
+  "Hash": "k3Qz/gReK91pVV7SHKfc8xnFCzMHUsi/D1wM6SiYc/4=",
   "Source": "gestao_campeonato",
   "BasePath": "_content/gestao_campeonato",
   "Mode": "Default",
@@ -185,6 +185,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\chefs\\imagemmatheuschefs.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\assets\\img\\Dioprojeto - Copia.jpeg",
+      "SourceId": "gestao_campeonato",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\",
+      "BasePath": "_content/gestao_campeonato",
+      "RelativePath": "assets/img/Dioprojeto - Copia.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\Dioprojeto - Copia.jpeg"
     },
     {
       "Identity": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\assets\\img\\event-custom.jpg",
