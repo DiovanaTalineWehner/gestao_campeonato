@@ -30,27 +30,36 @@
                     <input type="password" id="senha" name="senha" placeholder="Senha">
                 </div>
                 <button type="submit" class="btn-criar-conta">Criar conta</button>
+                <!--<button class="btn-login" onclick="meuFormulario()">Criar conta</button>-->
             </div>
         </div>
     </div>
 </form>
 
-
-
 <!-- Faz o envio dos dados para o back-->
 <script>
+document.getElementById('meuFormulario').addEventListener('submit', function(event) {
+  event.preventDefault(); // Impede o envio padrão do formulário
 
- function enviarDadosCriarConta(nome, email, senha) {
-   //Objeto com os dados a serem enviados para o backend
+  // Obtém os valores dos campos do formulário
+  var nome = document.getElementById('nome').value;
+  var email = document.getElementById('email').value;
+  var senha = document.getElementById('senha').value;
+
+  enviarDadosCriarConta(nome, email, senha); // Chama a função enviarDadosCriarConta() com os valores obtidos
+});
+
+function enviarDadosCriarConta(nome, email, senha) {
+  // Objeto com os dados a serem enviados para o backend
   var dados = {
     nome: nome,
     email: email,
     senha: senha
   };
 
-  fetch('http://localhost:5000/api/usuario/CadastrarUsuario', {
+  fetch('/api/usuario/CadastrarUsuario/', {
     method: 'POST',
-    headers: {
+    headers: {  
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(dados)
@@ -66,14 +75,21 @@
     }
   })
   .catch(function(error) {
-
-     //Ocorreu um erro na requisição
-
+    // Ocorreu um erro na requisição
     exibirMensagemErro('Erro na conexão com o servidor. Tente novamente mais tarde.');
   });
 }
-</script>
 
+function exibirMensagemSucesso(mensagem) {
+  // Implemente a lógica para exibir uma mensagem de sucesso na interface do usuário
+  console.log('Sucesso:', mensagem);
+}
+
+function exibirMensagemErro(mensagem) {
+  // Implemente a lógica para exibir uma mensagem de erro na interface do usuário
+  console.log('Erro:', mensagem);
+}
+</script>
 
 </body>
 </html>

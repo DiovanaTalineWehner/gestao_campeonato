@@ -17,7 +17,7 @@ namespace gestao_campeonato.Controllers
 {
     [ApiController]
     [Route("/api/[controller]")]
-    public class UsuarioController : ControllerBase 
+    public class UsuarioController : ControllerBase
     {
         private readonly IConfiguration _configuration;
         private readonly IUsuarioService _usuarioService;
@@ -27,35 +27,44 @@ namespace gestao_campeonato.Controllers
             _usuarioService = usuarioService;
             _configuration = configuration;
         }
-         [HttpGet]
+        [HttpGet]
         public async Task<IEnumerable<Usuario>> GetAllAsync()
         {
             var usuarios = await _usuarioService.ListAsync();
             return usuarios;
         }
 
-         /*[HttpPost]
-        public async Task<ActionResult> CadastrarUsuario(Usuario usuario)
-        {
-            await _usuarioService.CadastrarUsuario(usuario);
-            return Ok(new { message = "Usuario created" });
-        }   */
+        /*[HttpPost]
+       public async Task<ActionResult> CadastrarUsuario(Usuario usuario)
+       {
+           await _usuarioService.CadastrarUsuario(usuario);
+           return Ok(new { message = "Usuario created" });
+       }   */
 
         [HttpPost]
-        public async Task<ActionResult> CadastrarUsuario(Usuario usuario)
+        [Route("CadastrarUsuario")]
+        public async Task<ActionResult> CadastrarUsuario([FromBody] Usuario usuario)
         {
-             if(usuario == null)
+            try
             {
-                return BadRequest();
-            } 
-
-            var result = await _usuarioService.CadastrarUsuario(usuario);
-
-            if (!result.Success)
-            {
-                return BadRequest(new ErrorResource(result.Message));
+                if (usuario == null)
+                {
+                    return BadRequest();
+                }
+    
+                var result = await _usuarioService.CadastrarUsuario(usuario);
+    
+                if (!result.Success)
+                {
+                    return BadRequest(new ErrorResource(result.Message));
+                }
+                return Ok(result);
             }
-            return Ok(result);
+            catch (Exception exp)
+            {
+                return BadRequest(exp.Message);
+                throw;
+            }
         }
 
         [HttpPost]
@@ -77,31 +86,31 @@ namespace gestao_campeonato.Controllers
             }
 
             return Unauthorized();
-                                                            
-                        //Enviar a informação para o Front-end
-                        //if (usuarioAutenticado)
-                        // {
-                        // Session["Username"] = username; // Armazena o nome de usuário na sessão
-                        // Response.Redirect("index.html"); // Redireciona para a página principal do site
-                        // }
-                        // else
-                        // {
-                        //Login inválido
-                        // Exibir mensagem de erro
-                        // }
-                                                             
+
+            //Enviar a informação para o Front-end
+            //if (usuarioAutenticado)
+            // {
+            // Session["Username"] = username; // Armazena o nome de usuário na sessão
+            // Response.Redirect("index.html"); // Redireciona para a página principal do site
+            // }
+            // else
+            // {
+            //Login inválido
+            // Exibir mensagem de erro
+            // }
 
 
 
 
-                                                             // protected void Page_Load(object sender, EventArgs e)
-                                                             // {
-                                                            // if (Session["Username"] != null)
-                                                            //   {
-                                                            //   string username = Session["Username"].ToString();
-                                                            //    userHeader.Text = "Bem-vindo, " + username;
-                                                            //   }
-                                                            // }
+
+            // protected void Page_Load(object sender, EventArgs e)
+            // {
+            // if (Session["Username"] != null)
+            //   {
+            //   string username = Session["Username"].ToString();
+            //    userHeader.Text = "Bem-vindo, " + username;
+            //   }
+            // }
 
 
 

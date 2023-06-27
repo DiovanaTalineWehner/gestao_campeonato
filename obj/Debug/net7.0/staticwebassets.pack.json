@@ -21,24 +21,44 @@
       "PackagePath": "staticwebassets\\assets\\css\\style.css"
     },
     {
+      "Id": "C:\\Users\\Matheus\\Documents\\GitHub\\gestao_campeonato\\wwwroot\\assets\\img\\API.jpeg",
+      "PackagePath": "staticwebassets\\assets\\img\\API.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Matheus\\Documents\\GitHub\\gestao_campeonato\\wwwroot\\assets\\img\\Carinho 2.jpeg",
+      "PackagePath": "staticwebassets\\assets\\img\\Carinho 2.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Matheus\\Documents\\GitHub\\gestao_campeonato\\wwwroot\\assets\\img\\Carrinho.jpeg",
+      "PackagePath": "staticwebassets\\assets\\img\\Carrinho.jpeg"
+    },
+    {
       "Id": "C:\\Users\\Matheus\\Documents\\GitHub\\gestao_campeonato\\wwwroot\\assets\\img\\Dioprojeto - Copia.jpeg",
       "PackagePath": "staticwebassets\\assets\\img\\Dioprojeto - Copia.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Matheus\\Documents\\GitHub\\gestao_campeonato\\wwwroot\\assets\\img\\Especial 1.jpeg",
+      "PackagePath": "staticwebassets\\assets\\img\\Especial 1.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Matheus\\Documents\\GitHub\\gestao_campeonato\\wwwroot\\assets\\img\\Front.jpeg",
+      "PackagePath": "staticwebassets\\assets\\img\\Front.jpeg"
     },
     {
       "Id": "C:\\Users\\Matheus\\Documents\\GitHub\\gestao_campeonato\\wwwroot\\assets\\img\\Imagem Lucas events.jpeg",
       "PackagePath": "staticwebassets\\assets\\img\\Imagem Lucas events.jpeg"
     },
     {
+      "Id": "C:\\Users\\Matheus\\Documents\\GitHub\\gestao_campeonato\\wwwroot\\assets\\img\\Rock1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Rock1.png"
+    },
+    {
+      "Id": "C:\\Users\\Matheus\\Documents\\GitHub\\gestao_campeonato\\wwwroot\\assets\\img\\Terceirafoto.jpeg",
+      "PackagePath": "staticwebassets\\assets\\img\\Terceirafoto.jpeg"
+    },
+    {
       "Id": "C:\\Users\\Matheus\\Documents\\GitHub\\gestao_campeonato\\wwwroot\\assets\\img\\WhatsApp Image 2023-06-12 at 01.48.56.jpeg",
       "PackagePath": "staticwebassets\\assets\\img\\WhatsApp Image 2023-06-12 at 01.48.56.jpeg"
-    },
-    {
-      "Id": "C:\\Users\\Matheus\\Documents\\GitHub\\gestao_campeonato\\wwwroot\\assets\\img\\about-bg.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\about-bg.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Matheus\\Documents\\GitHub\\gestao_campeonato\\wwwroot\\assets\\img\\about.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\about.jpg"
     },
     {
       "Id": "C:\\Users\\Matheus\\Documents\\GitHub\\gestao_campeonato\\wwwroot\\assets\\img\\apple-touch-icon.png",
@@ -47,6 +67,10 @@
     {
       "Id": "C:\\Users\\Matheus\\Documents\\GitHub\\gestao_campeonato\\wwwroot\\assets\\img\\chefs\\Dioprojeto.jpeg",
       "PackagePath": "staticwebassets\\assets\\img\\chefs\\Dioprojeto.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Matheus\\Documents\\GitHub\\gestao_campeonato\\wwwroot\\assets\\img\\chefs\\Garanhãodanoite.jpeg",
+      "PackagePath": "staticwebassets\\assets\\img\\chefs\\Garanhãodanoite.jpeg"
     },
     {
       "Id": "C:\\Users\\Matheus\\Documents\\GitHub\\gestao_campeonato\\wwwroot\\assets\\img\\chefs\\chefs-1.jpg",
@@ -69,20 +93,12 @@
       "PackagePath": "staticwebassets\\assets\\img\\chefs\\imagemmatheuschefs.jpeg"
     },
     {
-      "Id": "C:\\Users\\Matheus\\Documents\\GitHub\\gestao_campeonato\\wwwroot\\assets\\img\\event-custom.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\event-custom.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Matheus\\Documents\\GitHub\\gestao_campeonato\\wwwroot\\assets\\img\\event-private.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\event-private.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Matheus\\Documents\\GitHub\\gestao_campeonato\\wwwroot\\assets\\img\\events-bg.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\events-bg.jpg"
-    },
-    {
       "Id": "C:\\Users\\Matheus\\Documents\\GitHub\\gestao_campeonato\\wwwroot\\assets\\img\\favicon.png",
       "PackagePath": "staticwebassets\\assets\\img\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\Matheus\\Documents\\GitHub\\gestao_campeonato\\wwwroot\\assets\\img\\finalização.jpeg",
+      "PackagePath": "staticwebassets\\assets\\img\\finalização.jpeg"
     },
     {
       "Id": "C:\\Users\\Matheus\\Documents\\GitHub\\gestao_campeonato\\wwwroot\\assets\\img\\gallery\\WhatsApp Image 2023-06-10 at 01.16.47.jpeg",
@@ -173,24 +189,8 @@
       "PackagePath": "staticwebassets\\assets\\img\\menu\\tuscan-grilled.jpg"
     },
     {
-      "Id": "C:\\Users\\Matheus\\Documents\\GitHub\\gestao_campeonato\\wwwroot\\assets\\img\\specials-1.png",
-      "PackagePath": "staticwebassets\\assets\\img\\specials-1.png"
-    },
-    {
-      "Id": "C:\\Users\\Matheus\\Documents\\GitHub\\gestao_campeonato\\wwwroot\\assets\\img\\specials-2.png",
-      "PackagePath": "staticwebassets\\assets\\img\\specials-2.png"
-    },
-    {
-      "Id": "C:\\Users\\Matheus\\Documents\\GitHub\\gestao_campeonato\\wwwroot\\assets\\img\\specials-3.png",
-      "PackagePath": "staticwebassets\\assets\\img\\specials-3.png"
-    },
-    {
-      "Id": "C:\\Users\\Matheus\\Documents\\GitHub\\gestao_campeonato\\wwwroot\\assets\\img\\specials-4.png",
-      "PackagePath": "staticwebassets\\assets\\img\\specials-4.png"
-    },
-    {
-      "Id": "C:\\Users\\Matheus\\Documents\\GitHub\\gestao_campeonato\\wwwroot\\assets\\img\\specials-5.png",
-      "PackagePath": "staticwebassets\\assets\\img\\specials-5.png"
+      "Id": "C:\\Users\\Matheus\\Documents\\GitHub\\gestao_campeonato\\wwwroot\\assets\\img\\programacao arduino.png",
+      "PackagePath": "staticwebassets\\assets\\img\\programacao arduino.png"
     },
     {
       "Id": "C:\\Users\\Matheus\\Documents\\GitHub\\gestao_campeonato\\wwwroot\\assets\\img\\testimonials\\Dioprojeto.jpeg",
