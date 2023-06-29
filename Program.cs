@@ -47,10 +47,16 @@ builder.Services.AddEndpointsApiExplorer();
 {
     c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
 });*/
+
+/*app.use(cookieParser())
+appuse(
+    cors({
+        origin: config
+    })
+)**/
 builder.Services.AddCors(policyBuilder =>
     policyBuilder.AddDefaultPolicy(policy =>
-        policy.WithOrigins("*").AllowAnyHeader().AllowAnyHeader())
-);
+policy.WithOrigins("*").AllowAnyHeader().AllowAnyHeader()));
 
 var connectionStringMysql = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddMvc();
@@ -81,9 +87,14 @@ app.UseCors();
 // Configure the HTTP request pipeline.
 app.UseHttpsRedirection();
 app.UseAuthentication();
+app.UseTokenMiddleware();
 app.UseAuthorization();
 app.UseStaticFiles(); 
-
+/*app.UseEndpoints(endpoints =>{
+    endpoints.MapControllerRoute(
+    name: "api",
+    pattern: "api/{controller}");
+});*/
 app.MapControllers();
 
 app.Run();
