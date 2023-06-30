@@ -1,3 +1,6 @@
+//Após o usuário fazer o login
+
+
 //if (usuarioAutenticado) {
     //localStorage.setItem('username', username); // Armazena o nome de usuário no Armazenamento Local
     //window.location.href = 'index.html'; // Redireciona para a página principal do site

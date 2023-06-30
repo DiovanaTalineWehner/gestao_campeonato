@@ -26,7 +26,7 @@ flex-direction: column;
 
 .left-login > h1
 {
-color: #77ffc0;
+color: #ffffff;
 }
 
 
@@ -47,14 +47,14 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 padding: 30px 35px;
-background-color: #2f2841;
+background-color: #1e192c;
 border-radius: 20px;
-box-shadow: 0px 10px 40px #000056;
+box-shadow: 0px 10px 40px #fcfcfc;
 }
 
 .card-login > h1 
 {  
-    color: #0f8;
+    color: rgb(255, 255, 250);
     font-weight: 800;
     margin: 0; 
 }
@@ -104,7 +104,7 @@ box-shadow: 0px 10px 40px #000056;
     font-weight: 800;
     letter-spacing: 3px;
     color: #2b134b;
-    background: #00ff88;
+    background: #ffffff;
     cursor: pointer;
     box-shadow: 0px 10px 40px -12px;
 }
@@ -119,7 +119,7 @@ box-shadow: 0px 10px 40px #000056;
     font-weight: 800;
     letter-spacing: 3px;
     color: #2b134b;
-    background: #00ff88;
+    background: #ffffff;
     cursor: pointer;
     box-shadow: 0px 10px 40px -12px rgba(0, 0, 0, 0.75);
   }
