@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gHuORqwxbwsr1ztWlg8kA2OsQf21F90PWjRgs35Xw6ImSnsLxcAg1NyOCOnxty4gNmBXnGLAZTZzf2InMXmJrA==",
+  "dgSpecHash": "rM74eGa2/0uw6A6r5OpUNtz+Sc49lFandK95uQbhiIGObmS4Alt15bbL1+laYGRlINc0basmARWStGqsT8PSrA==",
   "success": true,
-  "projectFilePath": "c:\\Users\\diova\\Desktop\\gestao_campeonato\\gestao_campeonato.csproj",
+  "projectFilePath": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\gestao_campeonato.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\diova\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\diova\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.5\\microsoft.aspnetcore.authentication.jwtbearer.7.0.5.nupkg.sha512",
