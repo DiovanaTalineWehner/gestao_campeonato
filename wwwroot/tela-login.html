@@ -78,7 +78,9 @@
     }
     </script>
 -->
+
 <script>
+
 
     function DadosLogin(email, senha) {
 
@@ -101,6 +103,7 @@
    
      fetch('http://localhost:5000/api/usuario/login', {
         method: 'POST',
+        credentials:'same-origin',
         headers: {
          'Content-Type': 'application/json'
        },
@@ -110,6 +113,9 @@
         debugger
        if (response.ok) {
         alert("Usuário logado!")
+        //var cookieRecebido = "Token";
+        //document.cookie = token=cookieRecebido;
+       // localStorage.setItem("Token");
     } else {
        alert("Email ou senha incorreto")
        }

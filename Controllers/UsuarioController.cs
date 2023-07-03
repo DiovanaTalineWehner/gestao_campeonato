@@ -82,35 +82,48 @@ namespace gestao_campeonato.Controllers
                     new (JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
                 };
 
-                return Ok(new ResponseModel { Data = GetToken(authClaims) });
+                var token = GetToken(authClaims);
+
+                // Adicione o token como um cookie na resposta
+                var cookieOptions = new CookieOptions
+                {
+                    // é interessante que a data de expiração do cookie seja inferior à do token
+                    Expires = DateTime.UtcNow.AddHours(2),
+                    HttpOnly = false,
+                    Secure = false //usar true só se tiver HTTPS
+                };
+
+                Response.Cookies.Append(CookieTokenName.title, token.Token, cookieOptions);
+
+                return Ok(new ResponseModel { Data = token });
             }
 
             return Unauthorized();
-
-            //Enviar a informação para o Front-end
-            //if (usuarioAutenticado)
-            // {
-            // Session["Username"] = username; // Armazena o nome de usuário na sessão
-            // Response.Redirect("index.html"); // Redireciona para a página principal do site
-            // }
-            // else
-            // {
-            //Login inválido
-            // Exibir mensagem de erro
-            // }
-
-
-
+                                                            
+        //Enviar a informação para o Front-end
+        //if (usuarioAutenticado)
+        // {
+        // Session["Username"] = username; // Armazena o nome de usuário na sessão
+        // Response.Redirect("index.html"); // Redireciona para a página principal do site
+        // }
+        // else
+        // {
+        //Login inválido
+        // Exibir mensagem de erro
+        // }
+                                                             
 
 
-            // protected void Page_Load(object sender, EventArgs e)
-            // {
-            // if (Session["Username"] != null)
-            //   {
-            //   string username = Session["Username"].ToString();
-            //    userHeader.Text = "Bem-vindo, " + username;
-            //   }
-            // }
+
+
+        // protected void Page_Load(object sender, EventArgs e)
+        // {
+        // if (Session["Username"] != null)
+        //   {
+        //   string username = Session["Username"].ToString();
+        //    userHeader.Text = "Bem-vindo, " + username;
+        //   }
+        // }
 
 
 
@@ -123,16 +136,30 @@ namespace gestao_campeonato.Controllers
             var token = new JwtSecurityToken(
                 issuer: _configuration["JWT:ValidIssuer"],
                 audience: _configuration["JWT:ValidAudience"],
-                expires: DateTime.Now.AddHours(1),
+                expires: DateTime.Now.AddHours(3),
                 claims: authClaims,
                 signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256)
             );
 
+            /*var cookieOptions = new CookieOptions
+            {
+                Expires = DateTime.UtcNow.AddHours(2),
+                HttpOnly = true,
+                Secure = false
+            };
+
+            Response.Cookies.Append(CookieTokenName.title, new JwtSecurityTokenHandler().WriteToken(token), cookieOptions);*/
+
             return new()
             {
                 Token = new JwtSecurityTokenHandler().WriteToken(token),
-                ValidTo = token.ValidTo
+                ValidTo = token.ValidTo,
+                
             };
+
+        }
+        public class CookieTokenName{
+            public const string title = "Token"; 
         }
 
     }
