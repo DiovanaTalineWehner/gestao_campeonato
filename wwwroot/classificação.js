@@ -2,7 +2,7 @@ var addClassificationBtn = document.getElementById('add-classification-btn');
 
   // Adicione um ouvinte de evento de clique ao botão
   addClassificationBtn.addEventListener('click', function(event) {
-    event.preventDefault(); // Impede o envio do formulário
+    event.preventDefault(); // Impede o envio do formulário mais de uma vez
 
     // Obtenha os valores dos campos de entrada
     var positionSelect = document.getElementById('position-select');
@@ -19,7 +19,7 @@ var addClassificationBtn = document.getElementById('add-classification-btn');
 
     // Crie uma nova solicitação XMLHttpRequest
     var xhr = new XMLHttpRequest();
-    var url = 'URL_DO_SEU_BACKEND'; // Substitua pela URL do seu back-end
+    var url = 'URL_DO_BACKEND'; // Substitua pela URL do seu back-end
 
     // Defina o método e a URL da solicitação
     xhr.open('POST', url, true);
