@@ -9,10 +9,10 @@ fetch('/dados-dashboard')
 
     const dashboardTableBody = document.getElementById('dashboard-table-body');
 
-    // Limpe os dados anteriores da tabela
+    // Limpar os dados anteriores da tabela
     dashboardTableBody.innerHTML = '';
 
-    // Itere sobre os dados recebidos e crie as linhas da tabela
+    // Faz amostragem sobre os dados recebidos e criando as linhas da tabela
     data.forEach(item => {
       const row = document.createElement('tr');
 
@@ -33,7 +33,7 @@ fetch('/dados-dashboard')
       classificacaoCell.textContent = item.classificacao;
       row.appendChild(classificacaoCell);
 
-      // Adicione a linha à tabela
+   
       dashboardTableBody.appendChild(row);
     });
   })

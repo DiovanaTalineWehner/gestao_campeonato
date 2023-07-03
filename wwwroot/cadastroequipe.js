@@ -21,11 +21,9 @@ function cadastrarEquipe() {
       if (response.ok) {
         // Equipe cadastrada com sucesso
         console.log('Equipe cadastrada com sucesso!');
-        // Aqui você pode adicionar lógica adicional, como exibir uma mensagem de sucesso para o usuário
       } else {
         // Ocorreu um erro ao cadastrar a equipe
         console.log('Erro ao cadastrar equipe!');
-        // Aqui você pode adicionar lógica adicional para lidar com erros, como exibir uma mensagem de erro para o usuário
       }
     })
     .catch(function(error) {

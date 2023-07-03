@@ -10,8 +10,7 @@ championshipForm.addEventListener('submit', function(event) {
   var championshipName = championshipNameInput.value;
 
   // Realize o envio dos dados para o backend
-  // Aqui você pode adicionar a lógica de envio para o backend utilizando AJAX ou outra abordagem
-  // Exemplo de envio utilizando fetch:
+  //  envio  fetch:
   fetch('/cadastrar-campeonato', {
     method: 'POST',
     headers: {
@@ -24,7 +23,7 @@ championshipForm.addEventListener('submit', function(event) {
       // Sucesso no envio dos dados
       alert('Informações do campeonato enviadas para o backend:\nCidade: ' + selectedCity + '\nNome do Campeonato: ' + championshipName);
     } else {
-      // Erro no envio dos dados
+      // 
       alert('Erro ao enviar os dados para o backend.');
     }
   })

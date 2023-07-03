@@ -8,7 +8,7 @@ carForm.addEventListener('submit', function(event) {
       name: carName
     };
   
-    // Enviar uma requisição POST para a API com os dados do carro
+    // Envia uma requisição POST para a API com os dados do carro
     fetch('http://seu-backend.com/api/carros', {
       method: 'POST',
       headers: {
@@ -21,17 +21,15 @@ carForm.addEventListener('submit', function(event) {
         if (response.ok) {
           // O carro foi cadastrado com sucesso
           console.log('Carro cadastrado com sucesso!');
-          // Faça alguma ação adicional, se necessário
         } else {
-          // Houve um erro no cadastro do carro
           console.log('Erro ao cadastrar o carro.');
-          // Trate o erro de acordo com sua necessidade
+         
         }
       })
       .catch(function(error) {
-        // Houve um erro na requisição
+        // Caso ocorre algum problema  
         console.log('Erro na requisição:', error);
-        // Trate o erro de acordo com sua necessidade
+
       });
   
     document.getElementById('car-name').value = '';

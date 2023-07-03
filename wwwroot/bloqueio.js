@@ -1,5 +1,5 @@
 
-//Responsável por fazer o bloqjueio ao painel de sistemas, para o usuário poder acessar somente se ele tiver uma conta criada
+//Responsável por fazer o bloqueio ao painel de sistemas, para o usuário poder acessar somente se ele tiver uma conta criada
 
 
 $(document).ready(function() {
@@ -18,7 +18,7 @@ $(document).ready(function() {
         }
       },
       error: function() {
-        // Tratar erros de requisição
+        // Tratar  os possíveis erros de requisição
         console.log('Erro ao verificar autenticação.');
       }
     });
