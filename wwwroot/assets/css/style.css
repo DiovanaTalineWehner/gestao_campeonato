@@ -522,7 +522,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero .btn-menu:hover, #hero .btn-book:hover {
   background: #cda45e;
   color: #fff;
-}
+} 
 
 #hero .btn-book {
   margin-left: 15px;
@@ -1618,6 +1618,8 @@ section {
   font-weight: 300;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
+
+
 }
 
 #footer .footer-top .footer-info p {
@@ -1626,6 +1628,7 @@ section {
   margin-bottom: 0;
   font-family: "Playfair Display", serif;
   color: #fff;
+
 }
 
 #footer .footer-top .social-links a {
@@ -1641,12 +1644,14 @@ section {
   width: 36px;
   height: 36px;
   transition: 0.3s;
+
 }
 
 #footer .footer-top .social-links a:hover {
   background: #cda45e;
   color: #fff;
   text-decoration: none;
+
 }
 
 #footer .footer-top h4 {
@@ -1655,6 +1660,7 @@ section {
   color: #fff;
   position: relative;
   padding-bottom: 12px;
+  
 }
 
 #footer .footer-top .footer-links {
@@ -1725,6 +1731,7 @@ section {
   color: #fff;
   transition: 0.3s;
   border-radius: 50px;
+  
 }
 
 #footer .footer-top .footer-newsletter form input[type="submit"]:hover {
@@ -1784,6 +1791,45 @@ section {
     border: 8px solid;
     border-color: rgba(255, 255, 255, 0.2);;
   
+  }
+
+  .custom-img90{
+
+    height: 1200px;
+  }
+
+  .custom-img91{
+
+    height: 1200px;
+  }
+
+  .custom-img990{
+
+    height: 500px;
+    width: 700px;
+  }
+  
+  .custom-img101{
+    width: 800px;
+    height: 500px;
+
+
+  }
+
+
+  .custom-img150{
+
+    width: 800px;
+    height: 500px;
+
+  
+  }
+
+
+  .custom-img404{
+    height: 500px;
+
+
   }
 
  

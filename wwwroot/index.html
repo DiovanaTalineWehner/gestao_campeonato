@@ -34,6 +34,23 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+  <style> /* Estilizando os elementos bloqueados */
+    .bloqueado {
+      color: gray; /* Cor do texto */
+      cursor: not-allowed; /* Altera o cursor do mouse para indicar que o elemento está desativado */
+      pointer-events: none; /* Impede que o elemento seja clicável */
+      opacity: 0.5; /* Define a opacidade do elemento para indicar que está desativado */
+    }
+
+    .btn-menu{
+      background-color: transparent;
+    }
+
+    </style>
+
+    
+
 </head>
 
 <body>
@@ -58,16 +75,23 @@
           <li><a class="nav-link scrollto" href="#testimonials">Motivações</a></li>
           <li><a class="nav-link scrollto" href="#chefs">Fundadores</a></li>
           <li><a class="nav-link scrollto" href="#events">Sobre nós</a></li>
-          <li class="dropdown"><a href="#"><span>Sistema</span> <i class="bi bi-chevron-down"></i></a>
+
+         
+         
+          <!-- Class "bloqueado", responsável por desabilitar o bloqueio caso o usuario tenha uma conta
+          criada.-->
+
+          <li class="dropdown"><a><span>Acessar sistema</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Equipes</a></li>
-        
-              </li>
-              <li><a href="#">Participantes</a></li>
-              <li><a href="#">Placares</a></li>
-              <li><a href="#">Carros</a></li>
+              <li class="bloqueado"><a href="sistemastr.html">Sistema</a></li>
+              <li class="bloqueado"><a href="cadastroequipe.js">Equipes</a></li>
+              <li class="bloqueado"><a href="cadastrarocarro.js">Carros</a></li>
+              <li class="bloqueado"><a href="classificação.js">Classificação</a></li>
             </ul>
           </li>
+
+
+
           <li><a class="nav-link scrollto" href="#gallery">Nossos momentos</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -89,10 +113,28 @@
           <h1>The Rocket</span></h1>
           <h2>Venha conhecer nossa equipe!</h2>
 
-          <div class="btns">
-            <a href="#menu" class="btn-menu animated fadeInUp scrollto">Diversidades</a>
+                       <!--<button class="btn-menu animated fadeInUp scrollto">De uma Play em nossa ideia</button>-->
+                            <!--<a href="#menu" class="btn-menu animated fadeInUp scrollto">Diversidades</a>-->
+
+          <div class="btns" id="musicButton"> 
+
+        
+             <button class="btn-menu animated fadeInUp scrollto" onclick="playMusic()">De um Play em nossa jornada</button>
+             
+              
+                      
+
             <a href="#specials" class="btn-book animated fadeInUp scrollto">Linha de produção</a>
           </div>
+
+          <audio id="myAudio" loop>
+            <source src="music/Musica credence MP3.mp3" type="audio/mpeg">
+            
+        </audio>
+
+
+
+
         </div>
         <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
           <a href="https://www.youtube.com/watch?v=GlrxcuEDyF8" class="glightbox play-btn"></a>
@@ -287,7 +329,7 @@
         </div>
 
       </div>
-    </section><!-- End Menu Section -->
+    </section>-- End Menu Section -->
 
     <!-- ======= Specials Section ======= -->
     <section id="specials" class="specials">
@@ -324,7 +366,8 @@
                 <div class="row">
                   <div class="col-lg-8 details order-2 order-lg-1">
                     <h3>Mapeamento e construção do The Rocket</h3>
-                    <p class="fst-italic">Antes de começarmos a desenvolver o carro, realizamos o mapeamento dele através do Tinkercad para ter uma base de como nós queriamos ele.
+                    <p class="fst-italic">Antes de começarmos a desenvolver o carro, realizamos o mapeamento dele através do Tinkercad para ter uma base de como
+                      ficaria nosso projeto.
                     </p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
@@ -336,7 +379,11 @@
                 <div class="row">
                   <div class="col-lg-8 details order-2 order-lg-1">
                     <h3> Construção do Back-end</h3>
-                    <p class="fst-italic">Após fazermos o mapeamento do carro, começamos a construção do Back-end.</p>
+                    <p class="fst-italic">Após fazermos o mapeamento do carro, começamos a construção do Back-end da nossa aplicação. A importância do Back-end é muito 
+                      ampla, pois O back-end é responsável por implementar a lógica de negócios de um sistema. Ele processa as solicitações do usuário, realiza operações complexas, acessa bancos de dados,
+                      integra-se a sistemas externos e fornece os resultados necessários para a interface do usuário.
+
+                    </p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
                     <img src="assets/img/API.jpeg" alt="" class="img-fluid55">
@@ -347,8 +394,10 @@
                 <div class="row">
                   <div class="col-lg-8 details order-2 order-lg-1">
                     <h3>Desenvolvimento do Front-end</h3>
-                    <p class="fst-italic">Com a construção da parte elétrica, física e do Back-end do carro, começamos a montar o Front-end dele.</p>
-                    <p>Para fazer a divulgação do carrinho e os usuários poderem visualizar o sistema</p>
+                    <p class="fst-italic">Com a construção da parte elétrica, física e do Back-end do carro, começamos a montar o Front-end. Para fazer a divulgação do The Rocket e os usuários poderem visualizar o sistema.</p>
+                    <p> O front-end é responsável por criar a interface com a qual os usuários interagem. 
+                      Ele se concentra em projetar uma experiência do usuário agradável, intuitiva e eficiente.
+                    </p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
                     <img src="assets/img/Front.jpeg" alt="" class="img-fluid55">
@@ -360,7 +409,7 @@
                   <div class="col-lg-8 details order-2 order-lg-1">
                     <h3>Desenvolvimento da programação em Arduino</h3>
                     <p class="fst-italic">Com a estrutura do The Rocket pronta, começamos a montar a programação dela.</p>
-                    <p>Essa programação é responsável por dar "vida" ao The Rocket, ela desenvolve os movimentos  e ações específicas que ele tem que fazer a cada momento, sendo responsável por calcular e prever cada ação dele.</p>
+                    <p>Essa programação é responsável por dar "vida" ao The Rocket, ela desenvolve os movimentos  e ações específicas que ele tem que fazer a cada momento, sendo responsável por calcular e prever cada ação.</p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
                     <img src="assets/img/programacao arduino.png" alt="" class="img-fluid55">
@@ -372,7 +421,7 @@
                   <div class="col-lg-8 details order-2 order-lg-1">
                     <h3>Apresentamos o "The Rocket".</h3>
                     <p class="fst-italic">Com todos os pontos anteriores finalizados, terminamos a construção.</p>
-                    <p>Após isso, análisamos a nossa programação, revisamos a estrtura dele para garantir que tudo saia como o previsto, para vencermos a corrida!</p>
+                    <p>Após isso, análisamos a nossa programação, revisamos a estrtura dele para garantir que tudo aconteça como o previsto, para vencermos a corrida!</p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
                     <img src="assets/img/finalização.jpeg" alt="" class="img-fluid55">
@@ -409,12 +458,13 @@
                     <p><span>Principal qualidade: Motivação</span></p>
                   </div>
                   <p class="fst-italic">
-                      Meu nome é Matheus, me considero uma pessoa motivado, pois independente a situação estou sempre buscando melhor e alcançar meus objetivos.
+                      Meu nome é Matheus, me considero uma pessoa motivada, pois independente da situação estou sempre buscando melhor e alcançar meus objetivos.
                   </p>
                   <ul>
                     <li><i class="bi bi-check-circled"></i> Estou sempre em busca de desafios.</li>
                     <li><i class="bi bi-check-circled"></i> Gosto de fazer esportes, treinar, sair e programar. Meu estilo musical preferido é Rock.</li>
-                    <li><i class="bi bi-check-circled"></i> Sou ex militar, fiquei em 2º lugar no campeonato de melhor aptidão física do 1º RCMEC.</li>
+                    <li><i class="bi bi-check-circled"></i> Sou ex militar, e tento levar os ensinamentos de disciplina, foco e persistência que
+                    aprendi no meu tempo de militar, para toda a minha vida!</li>
                   </ul>
                   <p>
                    <!-- adicionar algo opcional-->
@@ -434,17 +484,17 @@
                     <p><span>Principal Qualidade Confiança:</span></p>
                   </div>
                   <p class="fst-italic">
-                    Meu nome é Lucas, sou um cara persistente que sempre buscar alçançar seus objetivos.
+                    Meu nome é Lucas, sou um cara persistente.
 .
                   </p>
                   <ul>
-                    <li><i class="bi bi-check-circled"></i> Sou uma pessoa muit estrovertida e sempre busco ver o lado bom mesmo nas coisas negativas</li>
-                    <li><i class="bi bi-check-circled"></i> Me considero uma pessoa de confiança, pois nunca pessoa em ganhar algo em cima de alguém e sempre que algum amigo precisar, pode contar comigo.</li>
-                    <li><i class="bi bi-check-circled"></i> Gosto de jogar futebol, meus estilos músicais são bem variados indo de sertanejo e funk. E também sou um cara muito festeiro gosto de curtir a noite com meus amigos e comemorar os bons momentos.</li>
+                    <li><i class="bi bi-check-circled"></i> Sou uma pessoa muito estrovertida e sempre busco ver o lado bom, mesmo nas coisas negativas</li>
+                    <li><i class="bi bi-check-circled"></i> Me considero uma pessoa de confiança, pois nunca penso em ganhar algo em cima de alguém, pois sempre que alguém precisar de mim, pode contar comigo, independente do momento!</li>
+                    <li><i class="bi bi-check-circled"></i> Gosto de jogar futebol, meus estilos músicais são bem variados indo de sertanejo a funk. E também sou um cara muito festeiro gosto de curtir a noite com meus amigos e comemorar os bons momentos.</li>
                   </ul>
                   
                 </div>
-              </div>
+              </div>  
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
@@ -591,8 +641,8 @@
 
           <div class="col-lg-3 col-md-4"> <!--Inserir uma imagem aqui-->
             <div class="gallery-item">
-              <a href="" class="gallery-lightbox" data-gall="gallery-item">
-                <img src="" alt="" class="img-fluid">
+              <a href="assets/img/gallery/momento2.jpeg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/gallery/momento2.jpeg" alt="" class="img-fluid custom-img90"> 
               </a>
             </div>
           </div>
@@ -607,8 +657,8 @@
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-4.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
+              <a href="assets/img/gallery/momento5.jpeg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/gallery/momento5.jpeg" alt="" class="img-fluid custom-img91">
               </a>
             </div>
           </div>
@@ -616,31 +666,31 @@
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item"> <!-- Anexar imagem nossa-->
               <a href="assets/img/gallery/WhatsApp Image 2023-06-10 at 01.20.43.jpeg" class="gallery-lightbox" data-gall="gallery-item">
-                <img src="assets/img/gallery/WhatsApp Image 2023-06-10 at 01.20.43.jpeg" alt="" class="img-fluid">
+                <img src="assets/img/gallery/WhatsApp Image 2023-06-10 at 01.20.43.jpeg" alt="" class="img-fluid custom-img404">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item"> <!-- Anexar imagem nossa-->
-              <a href="assets/img/gallery/gallery-6.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
+              <a href="assets/img/gallery/momento4.jpeg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/gallery/momento4.jpeg" alt="" class="img-fluid custom-img101">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item"> <!-- Anexar imagem nossa-->
-              <a href="assets/img/gallery/gallery-7.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
+              <a href="assets/img/gallery/momento1.jpeg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/gallery/momento1.jpeg" alt="" class="img-fluid custom-img990">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item"> <!-- Anexar imagem nossa-->
-              <a href="assets/img/gallery/gallery-8.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
+              <a href="assets/img/gallery/momento7.jpeg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/gallery/momento7.jpeg" alt="" class="img-fluid custom-img150">
               </a>
             </div>
           </div>
@@ -670,10 +720,10 @@
                   <span>CEO</span>
                 </div>
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
+                 <!-- <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>-->
                   <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <!--<a href=""><i class="bi bi-linkedin"></i></a>-->
                 </div>
               </div>
             </div>
@@ -688,10 +738,10 @@
                   <span>CTEO</span>
                 </div>
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <!--<a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>-->
                   <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <!--<a href=""><i class="bi bi-linkedin"></i></a>-->
                 </div>
               </div>
             </div>
@@ -706,10 +756,10 @@
                   <span>CEO</span>  
                 </div>
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <!--<a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>-->
                   <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                 <!-- <a href=""><i class="bi bi-linkedin"></i></a> -->
                 </div>
               </div>
             </div>
@@ -746,11 +796,11 @@
               <h3>The Rocket</h3>
               
               <div class="social-links mt-3">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                <!--<a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>--> 
+                <!--<a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>-->
+                <!--<a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>-->
+                <!--<a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>-->
               </div>
             </div>
           </div>
@@ -771,8 +821,8 @@
               <li><i class="bx bx-chevron-right"></i> <a href="#specials">Linha do tempo</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#testimonials">Nossas motivações</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#chefs">Fundadores</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#menu">Hardware do The Rocket</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Outros</a></li>
+              <!--<li><i class="bx bx-chevron-right"></i> <a href="#menu">Hardware do The Rocket</a></li>-->
+              <!--<li><i class="bx bx-chevron-right"></i> <a href="#">Outros</a></li-->
             </ul>
           </div>
 
@@ -798,7 +848,7 @@
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/restaurantly-restaurant-template/ -->
-        Designed by <a href="http://127.0.0.1:5500/index.html#">#Equipetherocket</a>
+        Designed by <a href="">#Equipetherocket</a>
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -817,6 +867,22 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+      <!-- Função para ativar Musica do site ao clicar no botão-->
+  <script>
+    function playMusic() {
+        var audio = document.getElementById("myAudio");
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    }
+</script>
+
+
+
 </body>
 
 </html>
+
+<!--http://127.0.0.1:5500/index.html#-- Local host>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sistema STR</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    /* Estilos adicionais */
+    .section {
+      display: none; /* Esconder todas as seções inicialmente */
+    }
+      /* Estilo da linha abaixo do campo */
+      .form-row {
+      margin-bottom: 20px;
+      /*border-bottom: 1px solid #ccc; */
+      padding-bottom: 5px;
+    }
+    .btn-primary + div {
+  border-bottom: none;
+} 
+
+   
+  </style>
+</head>
+<body>
+  <header>
+    <h1>The Rocket</h1>
+    <nav>
+      <ul>
+        <li><a href="#" id="system-link">Sistema</a></li>
+        <li><a href="#" id="team-link">Equipes</a></li>
+        <li><a href="#" id="car-link">Carros</a></li>
+        <li><a href="#" id="championship-link">Campeonato</a></li>
+        <li><a href="#" id="classification-link">Classificação</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Página de sistemas-->
+    <section id="home-section" class="section">
+      <h2>Bem-vindo ao sistema do The Rocket</h2>
+      <p>Cadastre o nome do seu carro, equipe, local e até a classficação para poder acompanharo os detalhes da corrida.  </p>
+      <p> Para isso, siga as etapas de cadastro até o final, inserindo os campos necessários em cada uma delas para visualizar as suas informações no sistema.</p>
+    </section>
+
+     
+    <!--Retorno para a página de sistemas-->
+    <section id="dashboard-section" class="section">
+      <h2>Dashboard</h2>
+      <table id="dashboard-table">
+        <thead>
+          <tr>
+            <th>Equipe</th>
+            <th>Carro</th>
+            <th>Campeonato</th>
+            <th>Classificação</th>
+          </tr>
+        </thead>
+        <tbody id="dashboard-table-body">
+          <!-- Os dados serão preenchidos dinamicamente aqui -->
+        </tbody>
+      </table>
+    </section>
+
+
+
+
+
+     <!--Página de carros onde o user vai cadastrar o carro-->
+      <section id="car-section" class="section">
+      <h2>Cadastro de Carros</h2>
+      <form id="car-form">
+        <div class="form-row">
+          <label for="car-name">Nome do Carro:</label>
+          <input type="text" id="car-name" name="car-name">
+        </div>
+        <div>
+          <button type="submit">Cadastrar Carro</button>
+        </div>
+      </form>
+    </section>
+
+  
+  
+    <!--Página de equipe onde o user vai cadastrar a equipe-->
+    <section id="team-section" class="section">
+      <h2>Cadastro de Equipes</h2>
+      <form id="team-form">
+        <div class="form-row">
+          <label for="team-name">Nome da Equipe:</label>
+          <input type="text" id="team-name" name="team-name">
+        </div>
+        <div class="form-row">
+          <button type="submit">Cadastrar Equipe</button>
+        </div>
+      </form>
+    </section>
+    
+
+
+     <!--Página de Campeonato onde o user vai adicionar o local e o nome do campeonato-->
+    <section id="championship-section" class="section">
+      <h2>Local do Campeonato</h2>
+      <form id="championship-form">
+        <div class="form-row">
+          <label for="city-select">Cidade:</label>
+          <select id="city-select" name="city-select" required>
+            <option value="">...</option>
+            <!-- Opções de cidades do Rio Grande do Sul -->
+            <option value="porto-alegre">Porto Alegre</option>
+            <option value="caxias-do-sul">Caxias do Sul</option>
+            <option value="horizontina">Horizontina</option>
+            <option value="tres-passos">Três Passos</option>
+            <option value="independencia">Independência</option>
+            <option value="doutor-mauricio-cardoso">Doutor Maurício Cardoso</option>
+            <option value="santa-rosa">Santa Rosa</option>
+            <option value="alegria">Alegria</option>
+            <option value="ijui">Ijuí</option>
+            <option value="boa-vista-do-burica">Boa Vista do Buricá</option>
+            <option value="tres-de-maio">Três de Maio</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="championship-name">Nome do Campeonato:</label>
+          <input type="text" id="championship-name" name="championship-name" required>
+        </div>
+        <div class="form-row">
+          <button type="submit">Enviar local e nome do campeonato</button>
+        </div>
+      </form>
+    </section>
+
+
+
+  <!-- Página de classificação onde o user vai inserir a classificação e o tempo dela-->
+    <section id="classification-section" class="section">
+      <h2>Classificação</h2>
+      <form id="classification-form">
+        <div class="form-row">
+          <label for="position-select">Posição:</label>
+          <select id="position-select" name="position-select">
+            <option value="">Selecione uma posição</option>
+            <option value="1">1° Lugar</option>
+            <option value="2">2° Lugar</option>
+            <option value="3">3° Lugar</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="time-input">Tempo da Classificação:</label>
+          <input type="text" id="time-input" name="time-input">
+        </div>
+        <div class="form-row">
+          <button type="submit" id="add-classification-btn">Adicionar Classificação</button>
+
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 The Rocket. Todos os direitos reservados pela empresa.</p>
+  </footer>
+
+  <script>
+    //  links, serve para eu navegar entre as seções
+    var systemLink = document.getElementById('system-link');
+    var carLink = document.getElementById('car-link');
+    var teamLink = document.getElementById('team-link');
+    var championshipLink = document.getElementById('championship-link');
+    var classificationLink = document.getElementById('classification-link');
+
+    // Obtendo as seções para navegação
+    var homeSection = document.getElementById('home-section');
+    var carSection = document.getElementById('car-section');
+    var teamSection = document.getElementById('team-section');
+    var championshipSection = document.getElementById('championship-section');
+    var classificationSection = document.getElementById('classification-section');
+
+    //  Eventos de clique aos links
+    systemLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      homeSection.style.display = 'block';
+      carSection.style.display = 'none';
+      teamSection.style.display = 'none';
+      championshipSection.style.display = 'none';
+      classificationSection.style.display = 'none';
+    });
+
+    carLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      carSection.style.display = 'block';
+      homeSection.style.display = 'none';
+      teamSection.style.display = 'none';
+      championshipSection.style.display = 'none';
+      classificationSection.style.display = 'none';
+    });
+
+    teamLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      teamSection.style.display = 'block';
+      homeSection.style.display = 'none';
+      carSection.style.display = 'none';
+      championshipSection.style.display = 'none';
+      classificationSection.style.display = 'none';
+    });
+
+    championshipLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      championshipSection.style.display = 'block';
+      homeSection.style.display = 'none';
+      carSection.style.display = 'none';
+      teamSection.style.display = 'none';
+      classificationSection.style.display = 'none';
+    });
+
+    classificationLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      classificationSection.style.display = 'block';
+      homeSection.style.display = 'none';
+      carSection.style.display = 'none';
+      teamSection.style.display = 'none';
+      championshipSection.style.display = 'none';
+    });
+
+    function formatTime(time) {
+    const hours = Math.floor(time / 3600);
+    const minutes = Math.floor((time % 3600) / 60);
+    const seconds = time % 60;
+  
+    return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+  }
+  
+  // Função para atualizar o relógio digital da página de classificação
+  function updateClock() {
+    const timeInput = document.getElementById('time-input');
+    const currentTime = Math.floor(Date.now() / 1000); // Obtém o tempo atual em segundos
+  
+    timeInput.value = formatTime(currentTime); // Atualiza o campo de tempo da classificação
+  }
+  
+  // Adiciona um ouvinte de evento para o campo de tempo da classificação
+  const timeInput = document.getElementById('time-input');
+  timeInput.addEventListener('click', updateClock);
+  
+  // Atualiza o relógio digital inicialmente
+  updateClock();
+
+    
+
+  </script>
+
+  <script src="cadastrarocarro.js"></script>
+  <script src="cadastroequipe.js"></script>
+  <script src="classificação.js"></script>
+  <script src="localcampeonato.js"></script>
+  <script src="sistemas.js"></script>
+
+
+ </body>
+
+
+</html>
