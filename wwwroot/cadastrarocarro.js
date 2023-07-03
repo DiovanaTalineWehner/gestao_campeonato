@@ -9,7 +9,7 @@ carForm.addEventListener('submit', function(event) {
     };
   
     // Envia uma requisição POST para a API com os dados do carro
-    fetch('http://seu-backend.com/api/carros', {
+    fetch('http:localhost:5000/api/carro/cadastrarcarro', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

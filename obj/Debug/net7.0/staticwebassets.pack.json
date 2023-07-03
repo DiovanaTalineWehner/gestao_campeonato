@@ -61,10 +61,6 @@
       "PackagePath": "staticwebassets\\assets\\img\\WhatsApp Image 2023-06-12 at 01.48.56.jpeg"
     },
     {
-      "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\assets\\img\\apple-touch-icon.png",
-      "PackagePath": "staticwebassets\\assets\\img\\apple-touch-icon.png"
-    },
-    {
       "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\assets\\img\\chefs\\Dioprojeto.jpeg",
       "PackagePath": "staticwebassets\\assets\\img\\chefs\\Dioprojeto.jpeg"
     },
@@ -143,6 +139,34 @@
     {
       "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\assets\\img\\gallery\\gallery-8.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\gallery\\gallery-8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\assets\\img\\gallery\\momento1.jpeg",
+      "PackagePath": "staticwebassets\\assets\\img\\gallery\\momento1.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\assets\\img\\gallery\\momento2.jpeg",
+      "PackagePath": "staticwebassets\\assets\\img\\gallery\\momento2.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\assets\\img\\gallery\\momento3.jpeg",
+      "PackagePath": "staticwebassets\\assets\\img\\gallery\\momento3.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\assets\\img\\gallery\\momento4.jpeg",
+      "PackagePath": "staticwebassets\\assets\\img\\gallery\\momento4.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\assets\\img\\gallery\\momento5.jpeg",
+      "PackagePath": "staticwebassets\\assets\\img\\gallery\\momento5.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\assets\\img\\gallery\\momento6.jpeg",
+      "PackagePath": "staticwebassets\\assets\\img\\gallery\\momento6.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\assets\\img\\gallery\\momento7.jpeg",
+      "PackagePath": "staticwebassets\\assets\\img\\gallery\\momento7.jpeg"
     },
     {
       "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\assets\\img\\hero-bg.jpg",
@@ -517,8 +541,24 @@
       "PackagePath": "staticwebassets\\assets\\vendor\\swiper\\swiper-bundle.min.js"
     },
     {
+      "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\bloqueio.js",
+      "PackagePath": "staticwebassets\\bloqueio.js"
+    },
+    {
+      "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\cadastrarocarro.js",
+      "PackagePath": "staticwebassets\\cadastrarocarro.js"
+    },
+    {
+      "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\cadastroequipe.js",
+      "PackagePath": "staticwebassets\\cadastroequipe.js"
+    },
+    {
       "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\changelog.txt",
       "PackagePath": "staticwebassets\\changelog.txt"
+    },
+    {
+      "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\classificação.js",
+      "PackagePath": "staticwebassets\\classificação.js"
     },
     {
       "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\forms\\Readme.txt",
@@ -539,6 +579,26 @@
     {
       "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\inner-page.html",
       "PackagePath": "staticwebassets\\inner-page.html"
+    },
+    {
+      "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\localcampeonato.js",
+      "PackagePath": "staticwebassets\\localcampeonato.js"
+    },
+    {
+      "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\music\\Musica credence MP3.mp3",
+      "PackagePath": "staticwebassets\\music\\Musica credence MP3.mp3"
+    },
+    {
+      "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\sistemas.js",
+      "PackagePath": "staticwebassets\\sistemas.js"
+    },
+    {
+      "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\sistemastr.html",
+      "PackagePath": "staticwebassets\\sistemastr.html"
+    },
+    {
+      "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\styles.css",
+      "PackagePath": "staticwebassets\\styles.css"
     },
     {
       "Id": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\tela-login.css",

@@ -30,7 +30,7 @@
                     <input type="password" id="senha" name="senha" placeholder="Senha">
                 </div>
                 <button type="submit" class="btn-criar-conta">Criar conta</button>
-                <!--<button class="btn-login" onclick="meuFormulario()">Criar conta</button>-->
+                <button class="btn-login" onclick="meuFormulario()">Criar conta</button>
             </div>
         </div>
     </div>
@@ -38,58 +38,60 @@
 
 <!-- Faz o envio dos dados para o back-->
 <script>
-document.getElementById('meuFormulario').addEventListener('submit', function(event) {
-  event.preventDefault(); // Impede o envio padrão do formulário
-
-  // Obtém os valores dos campos do formulário
-  var nome = document.getElementById('nome').value;
-  var email = document.getElementById('email').value;
-  var senha = document.getElementById('senha').value;
-
-  enviarDadosCriarConta(nome, email, senha); // Chama a função enviarDadosCriarConta() com os valores obtidos
-});
-
-function enviarDadosCriarConta(nome, email, senha) {
-  // Objeto com os dados a serem enviados para o backend
-  var dados = {
-    nome: nome,
-    email: email,
-    senha: senha
-  };
-
-  fetch('/api/usuario/CadastrarUsuario/', {
-    method: 'POST',
-    headers: {  
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(dados)
-  })
-  .then(function(response) {
-    if (response.ok) {
-      // Login bem-sucedido
-      exibirMensagemSucesso('Conta criada com sucesso!');
-      // Redirecionar para a página de login ou qualquer outra ação necessária
-    } else {
-      // Login falhou
-      exibirMensagemErro('Erro ao criar conta. Verifique os dados e tente novamente.');
-    }
-  })
-  .catch(function(error) {
-    // Ocorreu um erro na requisição
-    exibirMensagemErro('Erro na conexão com o servidor. Tente novamente mais tarde.');
+  document.getElementById('meuFormulario').addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede o envio padrão do formulário
+  
+    // Obtém os valores dos campos do formulário
+    var nome = document.getElementById('nome').value;
+    var email = document.getElementById('email').value;
+    var senha = document.getElementById('senha').value;
+  
+    enviarDadosCriarConta(nome, email, senha); // Chama a função enviarDadosCriarConta() com os valores obtidos
   });
-}
-
-function exibirMensagemSucesso(mensagem) {
-  // Implemente a lógica para exibir uma mensagem de sucesso na interface do usuário
-  console.log('Sucesso:', mensagem);
-}
-
-function exibirMensagemErro(mensagem) {
-  // Implemente a lógica para exibir uma mensagem de erro na interface do usuário
-  console.log('Erro:', mensagem);
-}
-</script>
-
+  
+  function enviarDadosCriarConta(nome, email, senha) {
+    console.log('Enviando dados para a API:', nome, email, senha);
+  
+    // Objeto com os dados a serem enviados para o backend
+    var dados = {
+      nome_usuario: nome,
+      email_usuario: email,
+      senha_usuario: senha
+    };
+    
+    fetch('http://localhost:5000/api/usuario/cadastrar', {
+      method: 'POST',
+      headers: {  
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(dados)
+    })
+    .then(response=>response.json())
+    .then(function(response) {
+      debugger
+      if (response.success) {
+        // Login bem-sucedido
+        exibirMensagemSucesso('Conta criada com sucesso!');
+        // Redirecionar para a página de login ou qualquer outra ação necessária
+      } else {
+        // Login falhou
+        exibirMensagemErro('Erro ao criar conta. Verifique os dados e tente novamente.');
+      }
+    })
+    .catch(function(error) {
+      // Ocorreu um erro na requisição
+      exibirMensagemErro('Erro na conexão com o servidor. Tente novamente mais tarde.');
+    });
+  }
+  
+  function exibirMensagemSucesso(mensagem) {
+    alert('Sucesso');
+  }
+  
+  function exibirMensagemErro(mensagem) {
+    alert('Erro');
+  }
+  </script>
+ 
 </body>
 </html>

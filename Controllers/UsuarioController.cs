@@ -42,7 +42,7 @@ namespace gestao_campeonato.Controllers
        }   */
 
         [HttpPost]
-        [Route("CadastrarUsuario")]
+        [Route("cadastrar")]
         public async Task<ActionResult> CadastrarUsuario([FromBody] Usuario usuario)
         {
             try

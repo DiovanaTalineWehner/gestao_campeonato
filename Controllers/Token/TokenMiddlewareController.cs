@@ -38,4 +38,4 @@ public static class TokenMiddlewareExtensions
         return builder.UseMiddleware<TokenMiddleware>();
     }
 }
-}
+}*/

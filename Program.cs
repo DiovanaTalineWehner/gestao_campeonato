@@ -87,7 +87,7 @@ app.UseCors();
 // Configure the HTTP request pipeline.
 app.UseHttpsRedirection();
 app.UseAuthentication();
-app.UseTokenMiddleware();
+//app.UseTokenMiddlewa  re();
 app.UseAuthorization();
 app.UseStaticFiles(); 
 /*app.UseEndpoints(endpoints =>{

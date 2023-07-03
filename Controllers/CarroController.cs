@@ -12,7 +12,6 @@ using gestao_campeonato.Service.Communication;
 namespace gestao_campeonato.Controllers
 {
     [ApiController]
-    [Authorize]
 
     [Route("/api/[controller]")]
     public class CarroController : ControllerBase 
@@ -38,6 +37,7 @@ namespace gestao_campeonato.Controllers
         }
 
         [HttpPost]
+        [Route("cadastrarcarro")]
         public async Task<ActionResult> CadastrarCarro(Carro carro)
         {
              if(carro == null)
