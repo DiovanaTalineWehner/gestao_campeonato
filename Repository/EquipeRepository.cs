@@ -19,17 +19,13 @@ namespace gestao_campeonato.Repository
              _context.Equipe.AddAsync(equipe);
             await _context.SaveChangesAsync();
         }
-        /*public async Task<Equipe> GetEquipeById(int id_equipe)
-        {
-            return await _context.Equipe.FirstOrDefaultAsync(e => e.id_equipe == id_equipe);
-        }*/
-        /*public async Task<Equipe> GetEquipeById(int id_equipe)
-        {
-            return await _context.Equipe.FindAsync(id_equipe);
-        }*/
         public async Task<Equipe> GetEquipeById(int id_equipe)
         {
             return await _context.Equipe.FindAsync(id_equipe);
+        }
+         public async Task<Equipe> GetEquipeByName(string nome_equipe)
+        {
+            return await _context.Equipe.FirstOrDefaultAsync(e => e.nome_equipe == nome_equipe);
         }
 }
 }

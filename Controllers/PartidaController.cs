@@ -1,4 +1,4 @@
-using System;
+/*using System;
 using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
@@ -26,4 +26,4 @@ namespace gestao_campeonato.Controllers
             return partidas;
         }
     }
-}
+}*/

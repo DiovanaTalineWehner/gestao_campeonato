@@ -24,12 +24,20 @@ namespace gestao_campeonato.Service
             return await _equipeRepository.ListAsync();
         }
     
-    public async Task CadastrarEquipe(Equipe equipe)
+    public async Task<EquipeResponse> CadastrarEquipe(Equipe equipe){
+        try
         {
+            var existeEquipe = await _equipeRepository.GetEquipeByName(equipe.nome_equipe);
+            if (existeEquipe != null)
+            {
+                return new EquipeResponse("Já existe uma equipe com esse nome.");
+            }
             await _equipeRepository.CadastrarEquipe(equipe);
-        }
-        
-            
-        
-    }
+            return new EquipeResponse(equipe);
+        }    
+        catch (Exception ex)
+            {
+                return new EquipeResponse($"An error occurred when saving the product: {ex.Message}");
+            }       
+    }}
 }

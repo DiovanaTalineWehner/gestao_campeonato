@@ -9,6 +9,7 @@ namespace gestao_campeonato.Repository
     {
         Task<IEnumerable<Campeonato>> ListAsync();
         Task CadastrarCampeonato(Campeonato campeonato);
+        Task<Campeonato> GetCampeonatoByName(string nome_campeonato);
 
     }
 }

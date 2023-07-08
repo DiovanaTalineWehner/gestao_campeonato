@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using gestao_campeonato.Database;
 using gestao_campeonato.Service;
 using gestao_campeonato.Models;
+using Microsoft.AspNetCore.Authorization;
+using gestao_campeonato.Service.Communication;
 
 namespace gestao_campeonato.Controllers
 {
@@ -25,6 +27,23 @@ namespace gestao_campeonato.Controllers
         {
             var Classificacoes = await _classificacaoService.ListAsync();
             return Classificacoes;
+        }
+        [HttpPost]
+        [Route("cadastrarcassificacao")]
+
+        public async Task<ActionResult> CadastrarClassificacao(Classificacao classificacao)
+        {
+            if(classificacao == null)
+            {
+                return BadRequest();
+            }
+            var result = await _classificacaoService.CadastrarClassificacao(classificacao);
+
+            if (!result.Success)
+            {
+                return BadRequest(new ErrorResource(result.Message));
+            }
+            return Ok(result);
         }
 
     }

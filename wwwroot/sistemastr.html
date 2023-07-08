@@ -276,8 +276,33 @@
       classificationSection.style.display = 'none';
     });
 
-    function carregarEquipe(elemento) {
-      fetch("/api/equipe").then(r => r.json()).then(result => {
+  const batchTrack = document.getElementById("equipe-select");
+  const getPost = async () => {
+    debugger
+      const response = await fetch("http://localhost:5000/api/equipe");
+      console.log(response);
+      const data = response.json();
+      return data;
+  };
+
+    const displayOption = async () => {
+      debugger
+        const options = await getPost();
+        options.forEach(option => {
+            debugger
+            const newOption = document.createElement("option");
+            console.log(option);
+            newOption.value = option.batchName;
+            newOption.text = option.batchName;
+            batchTrack.appendChild(newOption);
+    
+        });
+    };
+    displayOption();
+
+    /*function carregarEquipe(elemento) {
+      debugger
+      fetch("http://localhost:5000/api/equipe").then(r => r.json()).then(result => {
         const select = document.querySelector(elemento);
         select.innerHTML = "";
         result.forEach(equipe => {
@@ -287,7 +312,7 @@
           select.append(option);
         })
       })
-    }
+    }*/
 
     carLink.addEventListener('click', function (event) {
       event.preventDefault();
@@ -296,9 +321,7 @@
       teamSection.style.display = 'none';
       championshipSection.style.display = 'none';
       classificationSection.style.display = 'none';
-      carregarEquipe('#listaequipes');
-
-
+      //carregarEquipe('#listaequipes');
     });
 
     teamLink.addEventListener('click', function (event) {
@@ -326,17 +349,16 @@
       carSection.style.display = 'none';
       teamSection.style.display = 'none';
       championshipSection.style.display = 'none';
-      carregarEquipe('#listaequipes');
-
+      //carregarEquipe('#listaequipes');
     });
 
 
   </script>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    carregarEquipe('#equipe-select');
-  });
+  /*document.addEventListener('DOMContentLoaded', function() {
+    carregarEquipe('equipe-select');
+  });*/
 </script>
 
 

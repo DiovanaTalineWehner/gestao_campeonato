@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+/*using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using gestao_campeonato.Models;
@@ -15,4 +15,4 @@ namespace gestao_campeonato.Repository
             return await _context.Partida.ToListAsync();
         }
     }
-}
+}*/

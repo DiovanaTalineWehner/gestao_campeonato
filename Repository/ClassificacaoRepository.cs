@@ -14,5 +14,14 @@ namespace gestao_campeonato.Repository
         {
             return await _context.Classificacao.ToListAsync();
         }
+        /*public async Task<Classificacao> GetClassificacaoByName(string nome_classificacao)
+        {
+            return await _context.Classificacao.FirstOrDefaultAsync(e => e.nome_classificacao == nome_classificacao);
+        }*/
+        public async Task CadastrarClassificacao(Classificacao classificacao)
+        {
+             _context.Classificacao.AddAsync(classificacao);
+            await _context.SaveChangesAsync();
+        }
     }
 }

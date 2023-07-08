@@ -10,6 +10,8 @@ namespace gestao_campeonato.Repository
         Task<IEnumerable<Equipe>> ListAsync();
         Task CadastrarEquipe(Equipe equipe);
         Task<Equipe> GetEquipeById(int id_equipe);
+        Task<Equipe> GetEquipeByName(string nome_equipe);
+
 
     }
 }

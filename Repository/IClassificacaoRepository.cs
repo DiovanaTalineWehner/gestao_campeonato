@@ -8,5 +8,7 @@ namespace gestao_campeonato.Repository
     public interface IClassificacaoRepository
     {
         Task<IEnumerable<Classificacao>> ListAsync();
+        Task CadastrarClassificacao(Classificacao classificacao);
+     //   Task<Classificacao> GetClassificacaoByName(string nome_classificacao);
     }
 }

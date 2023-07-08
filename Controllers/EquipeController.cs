@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using gestao_campeonato.Database;
 using gestao_campeonato.Service;
 using gestao_campeonato.Models;
+using Microsoft.AspNetCore.Authorization;
+using gestao_campeonato.Service.Communication;
 
 namespace gestao_campeonato.Controllers
 {
@@ -27,9 +29,20 @@ namespace gestao_campeonato.Controllers
         }
 
         [HttpPost]
+        [Route("cadastrarequipe")]
         public async Task<ActionResult> CadastrarEquipe(Equipe equipe)
         {
-            await _equipeService.CadastrarEquipe(equipe);
-            return Ok(new { message = "Equipe created" });
+            if(equipe == null)
+            {
+                return BadRequest();
+            }
+
+            var result = await _equipeService.CadastrarEquipe(equipe);
+
+            if(!result.Success)
+            {
+                return BadRequest(new ErrorResource(result.Message));
+            }
+            return Ok(result);
         }    
 }}

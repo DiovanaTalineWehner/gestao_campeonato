@@ -16,8 +16,12 @@ namespace gestao_campeonato.Repository
         }
         public async Task CadastrarCampeonato(Campeonato campeonato)
         {
-            await _context.Campeonato.AddAsync(campeonato);
+              _context.Campeonato.AddAsync(campeonato);
             await _context.SaveChangesAsync();
+        }
+        public async Task<Campeonato> GetCampeonatoByName(string nome_campeonato)
+        {
+            return await _context.Campeonato.FirstOrDefaultAsync(e => e.nome_campeonato == nome_campeonato);
         }
     }
 }
