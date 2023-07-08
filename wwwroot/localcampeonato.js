@@ -1,34 +1,44 @@
-// Submissão do formulário de local do campeonato
-var championshipForm = document.getElementById('championship-form');
-championshipForm.addEventListener('submit', function(event) {
-  event.preventDefault(); // Evite o comportamento padrão de envio do formulário
-
-  // Obtenha os valores selecionados
-  var citySelect = document.getElementById('city-select');
-  var selectedCity = citySelect.value;
-  var championshipNameInput = document.getElementById('championship-name');
-  var championshipName = championshipNameInput.value;
-
-  // Realize o envio dos dados para o backend
-  //  envio  fetch:
-  fetch('/cadastrar-campeonato', {
+// Função para enviar os dados do formulário para o backend
+function adicionarClassificacao() {
+  // Obtém os valores dos campos do formulário
+  var posicaoSelecionada = document.getElementById('position-select').value;
+  var tempoClassificacao = document.getElementById('time-input').value;
+  var equipeSelecionada = document.getElementById('equipe-select-classification').value;
+  
+  // Cria um objeto com os dados da classificação
+  var classificacaoData = {
+    posicao: posicaoSelecionada,
+    tempo: tempoClassificacao,
+    equipe: equipeSelecionada
+  };
+  
+  // Realiza uma requisição POST para a API com os dados da classificação
+  fetch('/api/CadastrarLocal', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({ city: selectedCity, championshipName: championshipName })
+    body: JSON.stringify(classificacaoData)
   })
-  .then(response => {
+  .then(function(response) {
+    // Verifica se a requisição foi bem-sucedida
     if (response.ok) {
-      // Sucesso no envio dos dados
-      alert('Informações do campeonato enviadas para o backend:\nCidade: ' + selectedCity + '\nNome do Campeonato: ' + championshipName);
+      // Classificação adicionada com sucesso
+      console.log('Classificação adicionada com sucesso!');
     } else {
-      // 
-      alert('Erro ao enviar os dados para o backend.');
+      console.log('Erro ao adicionar classificação!');
     }
   })
-  .catch(error => {
-    console.error('Ocorreu um erro:', error);
-    alert('Erro ao enviar os dados para o backend.');
+  .catch(function(error) {
+    console.log('Erro de conexão com o backend:', error);
   });
+}
+
+// Obtém o formulário de adição de classificação
+var classificacaoForm = document.getElementById('classification-form');
+
+// Adiciona um evento de submit ao formulário
+classificacaoForm.addEventListener('submit', function(event) {
+  event.preventDefault(); // Evita o comportamento padrão de envio do formulário
+  adicionarClassificacao(); // Chama a função para adicionar a classificação
 });

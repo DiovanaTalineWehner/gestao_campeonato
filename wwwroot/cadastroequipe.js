@@ -9,7 +9,7 @@ function cadastrarEquipe() {
     };
   
     // Realiza uma requisição POST para a API com os dados da equipe
-    fetch('URL_DA_SUA_API/cadastrarEquipe', {
+    fetch('/api/CadastrarEquipe', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

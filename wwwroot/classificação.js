@@ -1,47 +1,47 @@
-var addClassificationBtn = document.getElementById('add-classification-btn');
-
-  // Adicione um ouvinte de evento de clique ao botão
-  addClassificationBtn.addEventListener('click', function(event) {
-    event.preventDefault(); // Impede o envio do formulário mais de uma vez
-
-    // Obtenha os valores dos campos de entrada
-    var positionSelect = document.getElementById('position-select');
-    var timeInput = document.getElementById('time-input');
-
-    var position = positionSelect.value;
-    var time = timeInput.value;
-
-    // Crie um objeto de dados para enviar ao back-end
-    var data = {
-      position: position,
-      time: time
-    };  
-
-    // Crie uma nova solicitação XMLHttpRequest
-    var xhr = new XMLHttpRequest();
-    var url = 'URL_DO_BACKEND'; // Substitua pela URL do seu back-end
-
-    // Defina o método e a URL da solicitação
-    xhr.open('POST', url, true);
-
-    // Defina o cabeçalho da solicitação (se necessário)
-    xhr.setRequestHeader('Content-Type', 'application/json');
-
-    // Converta o objeto de dados em uma string JSON
-    var jsonData = JSON.stringify(data);
-
-    // Defina a função de callback para tratar a resposta do back-end
-    xhr.onload = function() {
-      if (xhr.status === 200) {
-        // Requisição bem-sucedida, faça algo aqui se necessário
-        console.log('Dados enviados com sucesso!');
-      } else {
-        // A requisição falhou, trate o erro aqui
-        console.error('Erro ao enviar os dados: ' + xhr.status);
-      }
-    };
-
-    // Envie a solicitação com os dados JSON
-    xhr.send(jsonData);
-  });
+// Função para enviar os dados do formulário para o backend
+function adicionarClassificacao() {
+  // Obtém os valores dos campos do formulário
+  var posicaoSelecionada = document.getElementById('position-select').value;
+  var tempoClassificacao = document.getElementById('time-input').value;
+  var equipeSelecionada = document.getElementById('equipe-select-classification').value;
   
+  // Cria um objeto com os dados da classificação
+  var classificacaoData = {
+    posicao: posicaoSelecionada,
+    tempo: tempoClassificacao,
+    equipe: equipeSelecionada
+  };
+  
+  // Realiza uma requisição POST para a API com os dados da classificação
+  fetch('/api/Classificação', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(classificacaoData)
+  })
+  .then(function(response) {
+    // Verifica se a requisição foi bem-sucedida
+    if (response.ok) {
+      // Classificação adicionada com sucesso
+      console.log('Classificação adicionada com sucesso!');
+    } else {
+      // Ocorreu um erro ao adicionar a classificação
+      console.log('Erro ao adicionar classificação!');
+    }
+  })
+  .catch(function(error) {
+    // Ocorreu um erro de conexão com o backend
+    console.log('Erro de conexão com o backend:', error);
+    // Aqui você pode adicionar lógica adicional para lidar com erros de conexão
+  });
+}
+
+// Obtém o formulário de adição de classificação
+var classificacaoForm = document.getElementById('classification-form');
+
+// Adiciona um evento de submit ao formulário
+classificacaoForm.addEventListener('submit', function(event) {
+  event.preventDefault(); // Evita o comportamento padrão de envio do formulário
+  adicionarClassificacao(); // Chama a função para adicionar a classificação
+});
