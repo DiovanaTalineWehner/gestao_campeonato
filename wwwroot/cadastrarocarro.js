@@ -1,41 +1,52 @@
-// Função para enviar os dados do formulário para o backend
 function cadastrarCarro() {
-  // Obtém os valores dos campos do formulário
   var carroNome = document.getElementById('car-name').value;
-  var equipeSelecionada = document.getElementById('equipe-select').value;
+
+  var selectEquipe = document.getElementById("equipe-select");
+  var idEquipe = selectEquipe.value;
+  var nomeEquipe = selectEquipe.options[selectEquipe.selectedIndex].text;
+
+  if (!carroNome) {
+    alert('Informe o nome do Carro!');
+    return;
+  }
   
-  // Cria um objeto com os dados do carro
   var carroData = {
-    nome: carroNome,
-    equipe: equipeSelecionada
+    nome_carro: carroNome,
+    equipe: {
+      id_equipe: idEquipe,
+      nome_equipe: nomeEquipe
+    }
   };
   
-  // Realiza uma requisição POST para a API com os dados do carro
-  fetch('/api/cadastrarcarro', {
+  fetch('http://localhost:5000/api/carro/cadastrarcarro', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(carroData)
   })
+  .then(response=>response.json())
   .then(function(response) {
-    // Verifica se a requisição foi bem-sucedida
-    if (response.ok) {
-      console.log('Carro cadastrado com sucesso!');
-    } else {
-      console.log('Erro ao cadastrar carro!');
+    if (typeof response.messages !== 'undefined') {
+      alert(response.messages[0]);
+      return;
     }
+
+    if (typeof response.success !== 'undefined' && response.success) {
+      alert('Carro cadastrado com sucesso!');
+      return;
+    }
+
+    alert('Erro ao cadastrar Carro!');
   })
   .catch(function(error) {
     console.log('Erro de conexão com o backend:', error);
-    // Aqui você pode adicionar lógica adicional para lidar com erros de conexão
   });
 }
 
 var carroForm = document.getElementById('car-form');
 
-// Adiciona um evento de submit ao formulário
 carroForm.addEventListener('submit', function(event) {
-  event.preventDefault(); // Evita o comportamento padrão de envio do formulário
-  cadastrarCarro(); // Chama a função para cadastrar o carro
+  event.preventDefault();
+  cadastrarCarro();
 });

@@ -3,45 +3,53 @@ function adicionarClassificacao() {
   // Obtém os valores dos campos do formulário
   var posicaoSelecionada = document.getElementById('position-select').value;
   var tempoClassificacao = document.getElementById('time-input').value;
-  var equipeSelecionada = document.getElementById('equipe-select-classification').value;
+  var selectEquipe = document.getElementById("equipe-select-classification");
+  var idEquipe = selectEquipe.value;
+  var nomeEquipe = selectEquipe.options[selectEquipe.selectedIndex].text;
   
+  if (!tempoClassificacao){
+    alert('Informe o tempo da classificação!')
+    return;
+  }
   // Cria um objeto com os dados da classificação
   var classificacaoData = {
-    posicao: posicaoSelecionada,
-    tempo: tempoClassificacao,
-    equipe: equipeSelecionada
-  };
+    classificacao: posicaoSelecionada,
+    tempo_classificacao: tempoClassificacao,
+    equipe: {
+      id_equipe: idEquipe,
+      nome_equipe: nomeEquipe
+  }};
   
   // Realiza uma requisição POST para a API com os dados da classificação
-  fetch('/api/Classificação', {
+  fetch('http://localhost:5000/api/classificacao/cadastrarclassificacao', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(classificacaoData)
   })
+  .then(response=>response.json())
   .then(function(response) {
-    // Verifica se a requisição foi bem-sucedida
-    if (response.ok) {
-      // Classificação adicionada com sucesso
-      console.log('Classificação adicionada com sucesso!');
-    } else {
-      // Ocorreu um erro ao adicionar a classificação
-      console.log('Erro ao adicionar classificação!');
+    if (typeof response.messages !== 'undefined') {
+      alert(response.messages[0]);
+      return;
     }
+
+    if (typeof response.success !== 'undefined' && response.success) {
+      alert('Classificacao cadastrada com sucesso!');
+      return;
+    }
+
+    alert('Erro ao cadastrar a Classificacao!');
   })
   .catch(function(error) {
-    // Ocorreu um erro de conexão com o backend
     console.log('Erro de conexão com o backend:', error);
-    // Aqui você pode adicionar lógica adicional para lidar com erros de conexão
   });
 }
 
-// Obtém o formulário de adição de classificação
 var classificacaoForm = document.getElementById('classification-form');
 
-// Adiciona um evento de submit ao formulário
 classificacaoForm.addEventListener('submit', function(event) {
-  event.preventDefault(); // Evita o comportamento padrão de envio do formulário
-  adicionarClassificacao(); // Chama a função para adicionar a classificação
+  event.preventDefault(); 
+  adicionarClassificacao(); 
 });

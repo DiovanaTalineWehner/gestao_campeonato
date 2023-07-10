@@ -51,13 +51,12 @@ namespace gestao_campeonato.Service
                 }
                 await _CarroRepository.CadastrarCarro(carro);
 
-                return new CarroResponse(carro);
+                return new CarroResponse(new Carro());
             }
             catch (Exception ex)
             {
                 return new CarroResponse($"An error occurred when saving the product: {ex.Message}");
             }
-            
         }
 
         public async Task<CarroResponse> DeleteCarro(int id)

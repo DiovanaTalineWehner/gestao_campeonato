@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "obwcuJ8kxO0EBacs8aFVRKXAd/HP97e15tbP9cQJgI8=",
+  "Hash": "0wki8lbwYQp2Lk9LpMRwq7ZJnxr6nvxloZuCfBTaHGg=",
   "Source": "gestao_campeonato",
   "BasePath": "_content/gestao_campeonato",
   "Mode": "Default",
@@ -2361,6 +2361,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Criarconta.html"
+    },
+    {
+      "Identity": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\dashboard.js",
+      "SourceId": "gestao_campeonato",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\",
+      "BasePath": "_content/gestao_campeonato",
+      "RelativePath": "dashboard.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\dashboard.js"
     },
     {
       "Identity": "C:\\Users\\diova\\Desktop\\gestao_campeonato\\wwwroot\\forms\\book-a-table.php",

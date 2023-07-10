@@ -8,6 +8,5 @@ namespace gestao_campeonato.Models
         public IList<Carro> carros { get; set; } = new List<Carro>();
         public IList<Classificacao> classificacoes { get; set; } = new List<Classificacao>();
 
-        public IList<Campeonato> campeonatos { get; set; } = new List<Campeonato>();
     }
 }

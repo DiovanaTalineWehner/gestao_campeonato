@@ -39,7 +39,7 @@ namespace gestao_campeonato.Service
                 classificacao.equipe = existeEquipe;
                 await _classificacaoRepository.CadastrarClassificacao(classificacao);
 
-                return new ClassificacaoResponse(classificacao);
+                return new ClassificacaoResponse(new Classificacao());
             }
             catch (Exception ex)
             {

@@ -29,7 +29,7 @@ namespace gestao_campeonato.Controllers
             return Classificacoes;
         }
         [HttpPost]
-        [Route("cadastrarcassificacao")]
+        [Route("cadastrarclassificacao")]
 
         public async Task<ActionResult> CadastrarClassificacao(Classificacao classificacao)
         {

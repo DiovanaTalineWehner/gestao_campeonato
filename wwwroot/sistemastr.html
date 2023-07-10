@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <head>
   <title>Sistema STR</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
@@ -83,7 +83,7 @@
           </select>
         </div>
         <div class="form-row">
-          <button type="submit">Enviar dados de equipe e carro</button>
+          <button type="submit">Cadastrar</button>
         </div>
       </form>
     </section>
@@ -134,7 +134,7 @@
           </select>
         </div>
         <div class="form-row">
-          <button type="submit">Enviar dados de equipe e carro</button>
+          <button type="submit">Cadastrar</button>
         </div>
       </form>
     </section>
@@ -149,7 +149,7 @@
           <input type="text" id="team-name" name="team-name">
         </div>
         <div class="form-row">
-          <button type="submit">Cadastrar Equipe</button>
+          <button type="submit">Cadastrar</button>
         </div>
       </form>
     </section>
@@ -161,29 +161,11 @@
       <h2>Local do Campeonato</h2>
       <form id="championship-form">
         <div class="form-row">
-          <label for="city-select">Cidade:</label>
-          <select id="city-select" name="city-select" required>
-            <option value="">Selecione uma cidade</option>
-            <!-- Opções de cidades do Rio Grande do Sul -->
-            <option value="porto-alegre">Porto Alegre</option>
-            <option value="caxias-do-sul">Caxias do Sul</option>
-            <option value="horizontina">Horizontina</option>
-            <option value="tres-passos">Três Passos</option>
-            <option value="independencia">Independência</option>
-            <option value="doutor-mauricio-cardoso">Doutor Maurício Cardoso</option>
-            <option value="santa-rosa">Santa Rosa</option>
-            <option value="alegria">Alegria</option>
-            <option value="ijui">Ijuí</option>
-            <option value="boa-vista-do-burica">Boa Vista do Buricá</option>
-            <option value="tres-de-maio">Três de Maio</option>
-          </select>
-        </div>
-        <div class="form-row">
           <label for="championship-name">Nome do Campeonato:</label>
           <input type="text" id="championship-name" name="championship-name" required>
         </div>
         <div class="form-row">
-          <button type="submit">Enviar local, equipe e nome do campeonato</button>
+          <button type="submit">Cadastrar</button>
         </div>
       </form>
     </section>
@@ -204,7 +186,7 @@
         </div>
         <div class="form-row">
           <label for="time-input">Tempo da Classificação:</label>
-          <input type="text" id="time-input" name="time-input">
+          <input type="time" id="time-input" name="time-input" step="2">
         </div>
         <div class="form-row">
           <label for="equipe-select-classification">Selecionar Equipe:</label>
@@ -213,7 +195,7 @@
           </select>
         </div>
         <div class="form-row">
-          <button type="submit" id="add-classification-btn">Adicionar Classificação</button>
+          <button type="submit" id="add-classification-btn">Cadastrar</button>
         </div>
       </form>
     </section>
@@ -276,9 +258,9 @@
       classificationSection.style.display = 'none';
     });
 
-  const batchTrack = document.getElementById("equipe-select");
-  const getPost = async () => {
-    debugger
+    const selectequipe1 = document.getElementById("equipe-select-classification");
+    const selectequipe2 = document.getElementById("equipe-select");
+    const getPost = async () => {
       const response = await fetch("http://localhost:5000/api/equipe");
       console.log(response);
       const data = response.json();
@@ -286,19 +268,29 @@
   };
 
     const displayOption = async () => {
-      debugger
         const options = await getPost();
         options.forEach(option => {
-            debugger
             const newOption = document.createElement("option");
             console.log(option);
-            newOption.value = option.batchName;
-            newOption.text = option.batchName;
-            batchTrack.appendChild(newOption);
+            newOption.value = option.id_equipe;
+            newOption.text = option.nome_equipe;
+            selectequipe1.appendChild(newOption);
     
         });
     };
     displayOption();
+    const displayOption2 = async () => {
+        const options = await getPost();
+        options.forEach(option => {
+            const newOption = document.createElement("option");
+            console.log(option);
+            newOption.value = option.id_equipe;
+            newOption.text = option.nome_equipe;
+            selectequipe2.appendChild(newOption);
+    
+        });
+    };
+    displayOption2();
 
     /*function carregarEquipe(elemento) {
       debugger

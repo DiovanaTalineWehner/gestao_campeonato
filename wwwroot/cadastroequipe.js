@@ -1,9 +1,13 @@
 // Função para enviar os dados do formulário para o backend
 function cadastrarEquipe(equipeNome) {
   // Obtém os valores dos campos do formulário
-  var equipeNome = document.getElementById('equipeNome').value;
+  var equipeNome = document.getElementById('team-name').value;
 
-  // Cria um objeto com os dados da equipe
+  if (!equipeNome) {
+    alert('Informe o nome da Equipe!');
+    return;
+  }
+
   var equipeData = {
     nome_equipe: equipeNome
   };
@@ -18,19 +22,20 @@ function cadastrarEquipe(equipeNome) {
   })
   .then(response=>response.json())
   .then(function(response) {
-    // Verifica se a requisição foi bem-sucedida
-    if (response.success) {
-      // Equipe cadastrada com sucesso
-      alert('Equipe cadastrada com sucesso!');
-    } else {
-      // Ocorreu um erro ao cadastrar a equipe
-      alert('Erro ao cadastrar equipe!');
+    if (typeof response.messages !== 'undefined') {
+      alert(response.messages[0]);
+      return;
     }
+
+    if (typeof response.success !== 'undefined' && response.success) {
+      alert('Equipe cadastrado com sucesso!');
+      return;
+    }
+
+    alert('Erro ao cadastrar Equipe!');
   })
   .catch(function(error) {
-    // Ocorreu um erro de conexão com o backend
     console.log('Erro de conexão com o backend:', error);
-    // Aqui você pode adicionar lógica adicional para lidar com erros de conexão
   });
 }
 

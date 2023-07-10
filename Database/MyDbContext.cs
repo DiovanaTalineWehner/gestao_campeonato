@@ -72,14 +72,14 @@ namespace gestao_campeonato.Database
             builder.Entity<Equipe>().HasKey(p => p.id_equipe);
 
 
-             builder.Entity<Equipe>().ToTable("equipe");
+          /*   builder.Entity<Equipe>().ToTable("equipe");
             builder.Entity<Equipe>()
             .HasMany(e => e.campeonatos)
             .WithOne(e => e.equipe)
             .HasForeignKey(e => e.id_equipe);
            // .HasPrincipalKey(e => e.id_partida);
             builder.Entity<Campeonato>().Property(p => p.id_equipe). IsRequired().ValueGeneratedOnAdd();
-            builder.Entity<Campeonato>().HasKey(p => p.id_equipe);
+            builder.Entity<Campeonato>().HasKey(p => p.id_equipe);*/
         }
 
     }
