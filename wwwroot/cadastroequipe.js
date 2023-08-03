@@ -1,5 +1,6 @@
 // Função para enviar os dados do formulário para o backend
 function cadastrarEquipe(equipeNome) {
+  debugger
   // Obtém os valores dos campos do formulário
   var equipeNome = document.getElementById('team-name').value;
 
@@ -16,7 +17,8 @@ function cadastrarEquipe(equipeNome) {
   fetch('http://localhost:5000/api/equipe/cadastrarequipe', {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'Authorization':'Bearer ' + getCookie("Token")
     },
     body: JSON.stringify(equipeData)
   })
@@ -39,6 +41,11 @@ function cadastrarEquipe(equipeNome) {
   });
 }
 
+function getCookie(name) {
+  var value = "; " + document.cookie;
+  var parts = value.split("; " + name + "=");
+  if (parts.length >= 2) return parts.pop().split(";").shift();
+}
 // Obtém o formulário de cadastro de equipe
 var equipeForm = document.getElementById('team-form');
 

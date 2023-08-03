@@ -15,7 +15,8 @@ function cadastrarCampeonato() {
   fetch('http://localhost:5000/api/campeonato/cadastrarcampeonato', {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ' + getCookie("Token")
     },
     body: JSON.stringify(campeonatoData)
   })
@@ -38,7 +39,11 @@ function cadastrarCampeonato() {
     console.log('Erro de conexão com o backend:', error);
   });
 }
-
+function getCookie(name) {
+  var value = "; " + document.cookie;
+  var parts = value.split("; " + name + "=");
+  if (parts.length >= 2) return parts.pop().split(";").shift();
+}
 var campeonatoForm = document.getElementById('championship-form');
 
 campeonatoForm.addEventListener('submit', function(event) {

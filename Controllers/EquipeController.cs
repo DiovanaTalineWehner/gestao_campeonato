@@ -12,6 +12,7 @@ using gestao_campeonato.Service.Communication;
 namespace gestao_campeonato.Controllers
 {
     [ApiController]
+    [Authorize]
     [Route("/api/[controller]")]
     public class EquipeController : ControllerBase 
     {

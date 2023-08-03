@@ -261,7 +261,11 @@
     const selectequipe1 = document.getElementById("equipe-select-classification");
     const selectequipe2 = document.getElementById("equipe-select");
     const getPost = async () => {
-      const response = await fetch("http://localhost:5000/api/equipe");
+      const response = await fetch('http://localhost:5000/api/equipe', {
+        headers: {
+          'Authorization':'Bearer ' + getCookie("Token")
+        },
+      });
       console.log(response);
       const data = response.json();
       return data;
@@ -343,7 +347,11 @@
       championshipSection.style.display = 'none';
       //carregarEquipe('#listaequipes');
     });
-
+    function getCookie(name) {
+  var value = "; " + document.cookie;
+  var parts = value.split("; " + name + "=");
+  if (parts.length >= 2) return parts.pop().split(";").shift();
+}
 
   </script>
 

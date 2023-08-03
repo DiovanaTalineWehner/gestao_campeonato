@@ -24,7 +24,8 @@ function adicionarClassificacao() {
   fetch('http://localhost:5000/api/classificacao/cadastrarclassificacao', {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ' + getCookie("Token")
     },
     body: JSON.stringify(classificacaoData)
   })
@@ -46,7 +47,11 @@ function adicionarClassificacao() {
     console.log('Erro de conexão com o backend:', error);
   });
 }
-
+function getCookie(name) {
+  var value = "; " + document.cookie;
+  var parts = value.split("; " + name + "=");
+  if (parts.length >= 2) return parts.pop().split(";").shift();
+}
 var classificacaoForm = document.getElementById('classification-form');
 
 classificacaoForm.addEventListener('submit', function(event) {
